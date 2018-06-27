@@ -1,0 +1,149 @@
+{
+    "resetYourPasswordModal": {
+        "resetYourPasswordTitle": "Reset your password",
+        "createPassword": "CREATE NEW PASSWORD",
+        "confirmPassword": "Confirm Password",
+        "savePassword": "SAVE PASSWORD",
+        "resetPasswordFor": "Reset password for: ",
+        "passwordSentTitle": "Your password is updated",
+        "passwordCannotBeBlank": "Password cannot be blank.",
+        "passwordsDoNotMatch": "Passwords do not match.",
+        "passwordCriteriaNotMet": "Password criteria are not met.",
+        "eightToTwentyFourChars": "8 to 24 characters",
+        "aLowercaseLetter": "A lowercase letter",
+        "anUppercaseLetter": "An uppercase letter",
+        "aNumber": "A number",
+        "aSpecialChar": "A special character",
+        "exampleSpecialChar": "- ! @ # $ % ^ & * ( ) _ +",
+        "forcedResetLabel1": "Thanks for shopping with us, ",
+        "forcedResetLabel2": ". Please take a moment to update and strengthen your password.",
+        "forcedResetTitle": "Protect Your Account",
+        "forcedResetHeaderAriaLabel1": "Thanks for shopping with us, ",
+        "forcedResetHeaderAriaLabel2": ". You are inside of the password reset menu, which has been placed for your protection. Your password is outdated and must be updated in order to continue checking out as a returning customer. ",
+        "passwordCriteriaAriaLabel": "Update your password to protect your account. The password criteria is as follows: Your password needs to be between eight and twenty four characters long, include a lower case letter, an upper case letter, a number and a special character, including at least one of the following: a dash, at sign, hashtag, dollar sign, percent sign, upper arrow, ampersand, star, left bracket, right bracket, underscore, plus sign. Once you enter your password, you will need to confirm your password by entering it a second time in the following text input and they must match in order for your new password to be saved successfully. Please enter your new password now. ",
+        "confirmPasswordAriaLabel": "Please confirm your new password. Please enter the same password again so it can be successfully saved to your account.",
+        "ariaPasswordCriteriaErrorLabel1": "The password you entered does not meet the criteria. Your password must ",
+        "ariaPasswordMismatchErrorLabel": "The password you entered does not meet the criteria. Your passwords do not match",
+        "ariaPasswordErrorUpdateInputLabel": ". Please press shift, tab to go back to update your input.",
+        "ariaValidationRules": {
+            "hasEightToTwentyFourChars": "have eight to twenty four characters, ",
+            "hasLowercaseChar": "include a lowercase character, ",
+            "hasUppercaseChar": "include an uppercase character, ",
+            "hasANumber": "include a number, ",
+            "hasSpecialChar": "include a special character, including at least one of the following: a dash, at sign, hashtag, dollar sign, percent sign, upper arrow, ampersand, star, left bracket, right bracket, underscore, plus sign "
+        }
+    },
+    "passwordSentModal": {
+        "passwordSentTitle": "Your password is updated",
+        "continueShopping": "CONTINUE SHOPPING",
+        "passwordResetAriaLabel": "Your password is updated. Press enter to continue shopping.",
+        "forcedPasswordUpdateLabel": "For your security, any billing information — including credit card details — have been deleted from your account.",
+        "forcedPasswordBtnLabel": "Return to checkout",
+        "forcedPasswordAriaLabel": "Your password is updated. For your security, any billing information — including credit card details — have been deleted from your account. Press enter to return to checkout."
+    },
+    "usedLinkModal": {
+        "usedLinkTitle": "This link has already been used",
+        "usedLinkLabel": "It looks like this link has already been used to create a new password. If you have reset your password, you can sign in.",
+        "signinText": "Sign in",
+        "returnToForgotPasswordPart1": "If you need to reset your password again, please return to ",
+        "returnToForgotPasswordPart2": " to get a new reset password link.",
+        "forgotYourPassword": "Forgot Your Password"
+    },
+    "forgotPasswordModal": {
+        "sendEmailTitle": "Forgot your password?",
+        "enterEmailAddress": "Enter your email address below. We'll send you a link to reset your password. For your security, any billing information — including credit card details — will be deleted from your account.",
+        "emailAddressLabel": "EMAIL ADDRESS",
+        "sendEmail": "SEND EMAIL",
+        "backToSignIn": "BACK TO SIGN IN",
+        "invalidEmail": "Enter a valid email address.",
+        "blankEmail": "Email address cannot be blank"
+    },
+    "expiredLinkPage": {
+        "expiredLinkTitle": "This link has expired",
+        "returnToForgotPasswordPart1": "Please return to ",
+        "returnToForgotPasswordPart2": " to get a new reset password link.",
+        "forgotYourPassword": "Forgot Your Password"
+    },
+    "emailSentModal": {
+        "emailSentTitle": "Email sent",
+        "emailSentLabel": "We've sent instructions on how to reset your password to ",
+        "changePasswordLabel": "Once you have changed your password, you can sign in.",
+        "backToSignIn": "BACK TO SIGN IN"
+    },
+    "signupModal": {
+        "signupTitle": "CREATE AN ACCOUNT",
+        "emailAddressLabel": "EMAIL ADDRESS",
+        "nextButtonLabel": "NEXT",
+        "trackYourOrders": "Track your orders",
+        "enjoyPersonalizedExp": "Enjoy a personalized experience",
+        "earnRewards": "Earn rewards for shopping",
+        "invalidEmail": "Enter a valid email address.",
+        "blankEmail": "Email address cannot be blank."
+    },
+    "signinSignupTabs": {
+        "signupText": "CREATE AN ACCOUNT",
+        "signinText": "Sign in",
+        "hiddenBodyText": "You are on the sign up menu to create a user account with Gap, Banana Republic, Old Navy and Athleta brands. Please tab to proceed forward with creating an account. To return to sign in, please press shift and tab. If you are a brand card holder and have a credit card with us, please press ...... to skip to card holders' sign in"
+    },
+    "singleOrderLookup": {
+        "singleOrderLookupTitle": "Single Order Lookup",
+        "singleOrderLookupText": "Please enter your order information to get more details about your order.",
+        "orderNumber": "Order Number",
+        "emailAddress": "Email Address",
+        "findOrderNumber": "Where can I find my order number?",
+        "gapPhoneNumber": "1 (800) 427.7895",
+        "findOrderNumberPopupText1": "Your order number is included in the email you received when you placed your order. If you no longer have this email, please call ",
+        "findOrderNumberPopupText2": " for assistance.",
+        "signInViewOrderHistory1": "Have an account? ",
+        "signInViewOrderHistory2": " to view your order history",
+        "lookUpOrder": "LOOK UP ORDER",
+        "signIn": "Sign in",
+        "blankEmail": "Email address cannot be blank.",
+        "invalidEmail": "Enter a valid email address.",
+        "invalidOrderNumber": "This order number is invalid. Order numbers must contain at least 7 characters and include letters and numbers only.",
+        "blankOrderNumber": "Order number cannot be blank.",
+        "accessibility": {
+            "enterYourOrderNumber": "You are on Single Order Lookup menu. Please enter your order details to get more information about your order. Enter your order number",
+            "findOrderNumber": "Where can I find my order number? Click this link to learn more",
+            "enterYourEmail": "Enter your email address",
+            "signInToViewOrder": "Have an account? sign in to view your order history."
+        }
+    },
+    "bananaCardFooter": {
+        "footerText": " Looking to manage your Banana Republic card? "
+    },
+    "mobileFooter": {
+        "customerServiceLabel": "Customer Service ",
+        "customerServiceHours": "7am-1am EST",
+        "customerServiceNumberLabel": "1-877-755-9348"
+    },
+    "orDivider": {
+        "orLabel": "or"
+    },
+    "mobileHeader": {
+        "backButtonLabel": "Back"
+    },
+    "logoHeader": {
+        "headerURL": "gap.com"
+    },
+    "accessibility": {
+        "ModalCloseButton": "close modal"
+    },
+    "brands": {
+        "on": "Old Navy",
+        "br": "Banana Republic",
+        "gp": "Gap",
+        "at": "Athleta"
+    },
+    "ordersAndReturns": {
+        "singleOrderLookupLabel": "If you made a purchase as a guest, please look up a single order to view your order details.",
+        "lookupSingleOrderButton": "Look up a single order",
+        "ordersAndReturnsHeaderLabel": "Orders & Returns",
+        "trackOrdersStartReturnLabel": "Track your orders, start a return, and view your order history.",
+        "ordersAndReturnsAriaLabel": "You are inside orders and returns menu, which has 2 options for access. You are currently on Sign in access. You need to sign in to track your orders, start a return or view your order history over the past six months. OR If you made a purchase as a guest, or want to look up a specific order, please use single order access. To use single order access, tab forward. To sign in, please click enter."
+    },
+    "shared": {
+        "giveUsFeedbackLabel": "Give Us Feedback",
+        "signInLabel": "Sign In"
+    }
+}

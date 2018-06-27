@@ -1,0 +1,17 @@
+// The "asset-path" variable helps Stitch point to your font assets (the containing directory should be named `fonts`)
+$asset-path: '/assets';
+@import "styles/layout/weatherPage.scss";
+html {
+    background-color: #f2f2f2;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 568px) {
+    html {
+        background-color: #fff;
+    }
+}
