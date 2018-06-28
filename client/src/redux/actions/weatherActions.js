@@ -1,5 +1,5 @@
 import * as types from "../constants/action-types";
-import { getWeather } from "../../api/weatherAPI/weatherAPI";
+import { getWeather } from "../../api/weatherApi/weatherApi";
 
 export const loadWeatherSuccess = weather => {
     return { type: types.LOAD_WEATHER_SUCCESS, weather };
