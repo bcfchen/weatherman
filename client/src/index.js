@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import store from 'redux/configureStore';
+import configureStore from 'redux/configureStore';
 import App from './App/App';
-let initStore = store();
+import { loadWeather } from "../src/redux/actions/weatherActions";
+
+const store = configureStore();
+store.dispatch(loadWeather());
+
 ReactDOM.render(
-    <Provider store={initStore}>
+    <Provider store={store}>
         <div>
             <Router>
                 <div>
