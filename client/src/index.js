@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import configureStore from 'redux/configureStore';
 import App from './App/App';
-import { loadWeather } from "../src/redux/actions/weatherActions";
+import { loadCurrentLocationWeather } from "../src/redux/actions/weatherActions";
 
 const store = configureStore();
-store.dispatch(loadWeather());
+store.dispatch(loadCurrentLocationWeather());
 
 ReactDOM.render(
     <Provider store={store}>

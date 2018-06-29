@@ -2,22 +2,22 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import * as weatherActions from "../../redux/actions/weatherActions";
-import * as cityActions from "../../redux/actions/cityActions";
+import * as locationActions from "../../redux/actions/locationActions";
 import { bindActionCreators } from "redux";
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
         super(props.context);
         this.onLoadWeather = this.onLoadWeather.bind(this);
-        this.onSearchCities = this.onSearchCities.bind(this);
+        this.onGetLocations = this.onGetLocations.bind(this);
     }
 
     onLoadWeather() {
         this.props.weatherActions.loadWeather("90403");
     }
 
-    onSearchCities() {
-        this.props.cityActions.loadCities("chi");
+    onGetLocations() {
+        this.props.locationActions.getSuggestedLocations("chi");
     }
 
     render() {
@@ -25,19 +25,19 @@ class WeatherPage extends React.Component {
             <h1>WEATHER PAGE HERE</h1>
             {this.props.weather.currentCondition ? this.props.weather.currentCondition.text : null}
             <Button onClick={this.onLoadWeather} variant="contained" color="primary">load weather</Button>
-            <Button onClick={this.onSearchCities} variant="contained" color="primary">load cities</Button>
+            <Button onClick={this.onGetLocations} variant="contained" color="primary">load locations</Button>
         </div>);
     }
 }
 
-function mapStateToProps(state, ownProps) {
-    return { weather: state.weatherPage.weather, cities: state.weatherPage.cities };
+const mapStateToProps = (state, ownProps) => {
+    return { weather: state.weatherPage.weather, locations: state.weatherPage.locations };
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
     return {
         weatherActions: bindActionCreators(weatherActions, dispatch),
-        cityActions: bindActionCreators(cityActions, dispatch)
+        locationActions: bindActionCreators(locationActions, dispatch)
     }
 }
 

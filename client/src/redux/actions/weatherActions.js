@@ -1,5 +1,6 @@
 import * as types from "../constants/action-types";
-import { getWeather } from "../../api/weatherApi/weatherApi";
+import { getWeather, getWeatherByLatLong } from "../../api/weatherApi/weatherApi";
+import { getCurrentCityName } from "../../api/locationApi/locationApi";
 
 export const loadWeatherSuccess = weather => {
     return { type: types.LOAD_WEATHER_SUCCESS, weather };
@@ -14,3 +15,13 @@ export const loadWeather = text => {
         });
     }
 };
+
+export const loadCurrentLocationWeather = () => {
+    return (dispatch) => {
+        return getCurrentCityName().then(locationStr => {
+            return getWeather(locationStr);
+        }).then(weatherResponse => {
+            dispatch(loadWeatherSuccess(weatherResponse));
+        })
+    };
+}

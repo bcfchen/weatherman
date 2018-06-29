@@ -2,7 +2,7 @@ const initialState = {
 	ui: {
 		weatherPage: {
 			weather: {},
-			cities: []
+			locations: []
 		}
 	},
 	server: {}

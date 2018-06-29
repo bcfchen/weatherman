@@ -8,9 +8,9 @@ export default function weatherPageReducer(state = initialState.ui.weatherPage, 
             newState = { ...state };
             newState.weather = Object.assign({}, action.weather);
             break;
-        case types.LOAD_CITIES_SUCCESS:
+        case types.GET_LOCATIONS_SUCCESS:
             newState = { ...state };
-            newState.cities = action.cities.slice();
+            newState.locations = action.locations.slice();
             break;
         default:
             break;
