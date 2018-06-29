@@ -1,8 +1,8 @@
 class Condition {
     constructor(properties) {
-        this.date = properties.date;
-        this.temp = properties.temp;
-        this.text = properties.text;
+        this.date = properties ? properties.date : undefined;
+        this.temp = properties ? properties.temp : undefined;
+        this.text = properties ? properties.text : undefined;
     }
 }
 

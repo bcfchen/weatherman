@@ -1,13 +1,20 @@
 .weather-body {
   color: red; }
 
+.current-weather-indicator-container {
+  color: white;
+  background-color: blue;
+  text-align: center; }
+
+.weather-forecast-item-container-odd {
+  background-color: gray; }
+
+.weather-forecast-item-container-even {
+  background-color: white; }
+
 html {
   background-color: #f2f2f2; }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-@media (max-width: 568px) {
-  html {
-    background-color: #fff; } }

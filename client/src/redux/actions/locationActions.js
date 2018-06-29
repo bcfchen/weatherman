@@ -18,13 +18,3 @@ export const getSuggestedLocations = locationText => {
         });
     }
 };
-
-// export const getUserLocation = () => {
-//     return (dispatch) => {
-//         return getCurrentLocation().then(currentLocation => {
-//             dispatch(getCurrentLocationSuccess(currentLocation));
-//         }).catch(error => {
-//             throw (error);
-//         })
-//     }
-// }

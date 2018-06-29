@@ -12,7 +12,7 @@ export const getCurrentCityName = (position) => {
     return getCurrentPosition().then(coords => {
         let queryUrl = config.geoBytesNearbyCities.basePath + "longitude=" + coords.longitude + "&latitude=" + coords.latitude;
         return getJSONP(queryUrl)
-    }).then(locationsResponse => Location.fromLocationArr(locationsResponse[0]).getCurrentLocationString());
+    }).then(locationsResponse => Location.fromLocationArr(locationsResponse[0]).getLocationString());
 }
 
 const getCurrentPosition = () => {
