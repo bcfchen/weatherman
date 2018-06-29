@@ -1,14 +1,19 @@
 import * as types from "../constants/action-types";
+import initialState from './initialState';
 
-export default function weatherPageReducer(state = {}, action) {
+export default function weatherPageReducer(state = initialState.ui.weatherPage, action) {
+    let newState;
     switch (action.type) {
         case types.LOAD_WEATHER_SUCCESS:
-            let weather = Object.assign({}, action.weather);
-            return { ...state, ...weather };
+            newState = { ...state };
+            newState.weather = Object.assign({}, action.weather);
+            break;
         case types.LOAD_CITIES_SUCCESS:
-            let cities = action.cities.slice();
-            return { ...state, cities }
+            newState = { ...state };
+            newState.cities = action.cities.slice();
+            break;
         default:
-            return state;
+            break;
     }
+    return newState || state;
 }

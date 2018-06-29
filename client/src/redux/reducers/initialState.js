@@ -1,18 +1,11 @@
 const initialState = {
 	ui: {
-		app: {
-			currentModal: null
-		},
-		resetPassword: {
-			validationResults: {
-				hasEightToTwentyFourChars: false,
-				hasLowercaseChar: false,
-				hasUppercaseChar: false,
-				hasANumber: false,
-				hasSpecialChar: false
-			}
+		weatherPage: {
+			weather: {},
+			cities: []
 		}
-	}
+	},
+	server: {}
 };
 
 export default initialState;
