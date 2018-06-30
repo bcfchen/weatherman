@@ -14,9 +14,8 @@ class WeatherPage extends React.Component {
         super(props.context);
         this.onLoadWeather = this.onLoadWeather.bind(this);
         this.onGetLocations = this.onGetLocations.bind(this);
-        props.weatherActions.loadHourlyForecasts();
+        props.weatherActions.loadCurrentLocationHourlyForecasts();
         props.weatherActions.loadFiveDayForecasts();
-        // props.locationActions.getSuggestedLocations();
     }
 
     onLoadWeather() {

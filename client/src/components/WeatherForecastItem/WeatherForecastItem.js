@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 
 const WeatherForecastItem = ({ forecastItem }) => {
     return (
-        <div className="weather-forecast-item-container-even">
+        <div className="weather-forecast-item-container">
             <div>{forecastItem.high}</div>
             <div>{forecastItem.low}</div>
             <div>{forecastItem.dayOfWeek}</div>

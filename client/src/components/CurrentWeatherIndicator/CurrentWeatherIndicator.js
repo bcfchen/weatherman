@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import LocationSearch from "../LocationSearch/LocationSearch";
 
 const CurrentWeatherIndicator = ({ currentHourlyForecast, location }) => {
     return (
@@ -8,9 +9,10 @@ const CurrentWeatherIndicator = ({ currentHourlyForecast, location }) => {
             <Typography variant="display2" gutterBottom>
                 {currentHourlyForecast && currentHourlyForecast.getHoursAndMinutes()}
             </Typography>
-            <Typography variant="display2" gutterBottom>
+            {currentHourlyForecast && <LocationSearch initialLocation={currentHourlyForecast.getLocationString()} />}
+            {/* <Typography variant="display2" gutterBottom>
                 {currentHourlyForecast && currentHourlyForecast.getLocationString()}
-            </Typography>
+            </Typography> */}
             <Typography variant="display1" gutterBottom>
                 {currentHourlyForecast && currentHourlyForecast.temperature}
             </Typography>

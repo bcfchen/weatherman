@@ -5,8 +5,14 @@ import HighchartsReact from "highcharts-react-official";
 
 const WeatherChart = ({ hourlyForecasts }) => {
     const options = {
+        chart: {
+            backgroundColor: null
+        },
         title: {
             text: null,
+        },
+        tooltip: {
+            enabled: false
         },
         xAxis: {
             visible: false
@@ -24,7 +30,8 @@ const WeatherChart = ({ hourlyForecasts }) => {
         },
         series: [{
             data: hourlyForecasts.map(forecast => forecast.temperature),
-            type: "spline"
+            type: "spline",
+            color: "#fff"
         }]
     }
 

@@ -8,11 +8,7 @@ class Location {
 
     getLocationString() {
         let hasInfo = this.city && this.region;
-        return hasInfo ? this.city + ", " + this.region : "";
-    }
-
-    static fromLocationObj(locationObj) {
-        return new Location(locationObj.city, locationObj.region, locationObj.country);
+        return hasInfo ? this.city + ", " + this.country : "";
     }
 
     static fromLocationString(locationStr) {
@@ -23,7 +19,7 @@ class Location {
         return new Location(city, region, country);
     }
 
-    static fromLocationArr(accuLocationObj) {
+    static fromLocationObj(accuLocationObj) {
         let city = accuLocationObj.LocalizedName,
             region = accuLocationObj.AdministrativeArea.ID,
             country = accuLocationObj.Country.LocalizedName,

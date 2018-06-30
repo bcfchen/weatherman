@@ -2,7 +2,12 @@
     "accuWeather": {
         "apiKey": "F6OYAmjseydKxZRETejionyZsTJQ3Rba",
         "location": {
-            "basePath": "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=F6OYAmjseydKxZRETejionyZsTJQ3Rba&q="
+            "locationByLatLong": {
+                "basePath": "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=F6OYAmjseydKxZRETejionyZsTJQ3Rba&q="
+            },
+            "autoComplete": {
+                "basePath": "http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey="
+            }
         },
         "fiveDayForecast": {
             "basePath": "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"

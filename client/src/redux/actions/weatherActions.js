@@ -10,7 +10,15 @@ export const loadHourlyForecastsSuccess = hourlyForecasts => {
     return { type: types.LOAD_HOURLY_FORECASTS_SUCCESS, hourlyForecasts };
 };
 
-export const loadHourlyForecasts = text => {
+export const loadHourlyForecasts = locationObj => {
+    return (dispatch) => {
+        getHourlyForecasts(locationObj).then(hourlyForecasts => {
+            dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
+        });
+    };
+}
+
+export const loadCurrentLocationHourlyForecasts = () => {
     return (dispatch) => {
         return getCurrentLocation().then(location => {
             return getHourlyForecasts(location);

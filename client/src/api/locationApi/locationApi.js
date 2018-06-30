@@ -1,18 +1,22 @@
 import Location from "../../models/Location";
-import { getJSONP } from "../baseApi/baseApi";
+import { getJSONP, getJSON } from "../baseApi/baseApi";
 const config = require("../config.json");
 
 export const getLocations = locationText => {
-    let queryUrl = config.geoBytesAutoCompleteCities.basePath + locationText;
-    return getJSONP(queryUrl)
-        .then(locationsResponse => locationsResponse.map(location => Location.fromLocationString(location)));
+    let queryUrl = config.accuWeather.location.autoComplete.basePath + config.accuWeather.apiKey + "&q=" + locationText;
+    return getJSON(queryUrl)
+        .then(locationsResponse => {
+            let locations = locationsResponse && locationsResponse.data.length > 0 ? locationsResponse.data : [];
+            return locations.map(location => Location.fromLocationObj(location))
+        });
 }
+
 
 export const getCurrentLocation = (position) => {
     return getCurrentPosition().then(coords => {
-        let queryUrl = config.accuWeather.location.basePath + coords.latitude + "%2C" + coords.longitude;
-        return getJSONP(queryUrl)
-    }).then(locationsResponse => Location.fromLocationArr(locationsResponse));
+        let queryUrl = config.accuWeather.location.locationByLatLong.basePath + coords.latitude + "%2C" + coords.longitude;
+        return getJSON(queryUrl)
+    }).then(locationsResponse => Location.fromLocationObj(locationsResponse.data));
 }
 
 const getCurrentPosition = () => {
