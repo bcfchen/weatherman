@@ -1,27 +1,43 @@
 import * as types from "../constants/action-types";
-import { getWeather, getWeatherByLatLong } from "../../api/weatherApi/weatherApi";
-import { getCurrentCityName } from "../../api/locationApi/locationApi";
+import { getFiveDayForecasts, getHourlyForecasts } from "../../api/weatherApi/weatherApi";
+import { getCurrentLocation } from "../../api/locationApi/locationApi";
 
-export const loadWeatherSuccess = weather => {
-    return { type: types.LOAD_WEATHER_SUCCESS, weather };
+export const loadWeatherSuccess = fiveDayForecasts => {
+    return { type: types.LOAD_FIVE_DAY_FORECAST_SUCCESS, fiveDayForecasts };
 };
 
-export const loadWeather = text => {
+export const loadHourlyForecastsSuccess = hourlyForecasts => {
+    return { type: types.LOAD_HOURLY_FORECASTS_SUCCESS, hourlyForecasts };
+};
+
+export const loadHourlyForecasts = text => {
     return (dispatch) => {
-        return getWeather(text).then(weatherResponse => {
-            dispatch(loadWeatherSuccess(weatherResponse));
-        }).catch(error => {
-            throw (error);
+        return getCurrentLocation().then(location => {
+            return getHourlyForecasts(location);
+        }).then(hourlyForecasts => {
+            dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
         });
-    }
-};
+    };
+}
 
-export const loadCurrentLocationWeather = () => {
+export const loadFiveDayForecasts = locationKey => {
+    if (!locationKey) {
+        return loadCurrentLocationFiveDayForecasts();
+    }
+
     return (dispatch) => {
-        return getCurrentCityName().then(locationStr => {
-            return getWeather(locationStr);
-        }).then(weatherResponse => {
-            dispatch(loadWeatherSuccess(weatherResponse));
-        })
+        return getFiveDayForecasts(locationKey).then(fiveDayForecasts => {
+            dispatch(loadWeatherSuccess(fiveDayForecasts));
+        });
+    };
+}
+
+const loadCurrentLocationFiveDayForecasts = () => {
+    return (dispatch) => {
+        return getCurrentLocation().then(location => {
+            return getFiveDayForecasts(location.key);
+        }).then(fiveDayForecasts => {
+            dispatch(loadWeatherSuccess(fiveDayForecasts));
+        });
     };
 }

@@ -18,3 +18,7 @@ export const getSuggestedLocations = locationText => {
         });
     }
 };
+
+export const getLocation = locationKey => {
+    
+}

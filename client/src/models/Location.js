@@ -1,8 +1,9 @@
 class Location {
-    constructor(city, region, country) {
+    constructor(city, region, country, key) {
         this.city = city;
         this.region = region;
         this.country = country;
+        this.key = key;
     }
 
     getLocationString() {
@@ -22,11 +23,12 @@ class Location {
         return new Location(city, region, country);
     }
 
-    static fromLocationArr(locationArr) {
-        let city = locationArr[1],
-            region = locationArr[2],
-            country = locationArr[3];
-        return new Location(city, region, country);
+    static fromLocationArr(accuLocationObj) {
+        let city = accuLocationObj.LocalizedName,
+            region = accuLocationObj.AdministrativeArea.ID,
+            country = accuLocationObj.Country.LocalizedName,
+            key = accuLocationObj.Key;
+        return new Location(city, region, country, key);
     }
 }
 

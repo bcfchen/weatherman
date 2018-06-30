@@ -2,20 +2,20 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const CurrentWeatherIndicator = ({ currentCondition, location }) => {
+const CurrentWeatherIndicator = ({ currentHourlyForecast, location }) => {
     return (
         <div className="current-weather-indicator-container">
             <Typography variant="display2" gutterBottom>
-                {currentCondition.getTime()}
+                {currentHourlyForecast && currentHourlyForecast.getHoursAndMinutes()}
             </Typography>
             <Typography variant="display2" gutterBottom>
-                {location.getLocationString()}
+                {currentHourlyForecast && currentHourlyForecast.getLocationString()}
             </Typography>
             <Typography variant="display1" gutterBottom>
-                {currentCondition.temp}
+                {currentHourlyForecast && currentHourlyForecast.temperature}
             </Typography>
             <Typography variant="display1" gutterBottom>
-                {currentCondition.text}
+                {currentHourlyForecast && currentHourlyForecast.text}
             </Typography>
         </div>
     );

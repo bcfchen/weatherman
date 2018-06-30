@@ -7,14 +7,16 @@ import { bindActionCreators } from "redux";
 import WeatherForecastList from "../../components/WeatherForecastList/WeatherForecastList";
 import CurrentWeatherIndicator from "../../components/CurrentWeatherIndicator/CurrentWeatherIndicator";
 import WeatherDetails from "../../components/WeatherDetails/WeatherDetails";
-
+import WeatherChart from "../../components/WeatherChart/WeatherChart";
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
         super(props.context);
         this.onLoadWeather = this.onLoadWeather.bind(this);
         this.onGetLocations = this.onGetLocations.bind(this);
-        props.weatherActions.loadCurrentLocationWeather();
+        props.weatherActions.loadHourlyForecasts();
+        props.weatherActions.loadFiveDayForecasts();
+        // props.locationActions.getSuggestedLocations();
     }
 
     onLoadWeather() {
@@ -27,18 +29,23 @@ class WeatherPage extends React.Component {
 
     render() {
         return (<div className="weather-body">
-            {this.props.weather.location && <CurrentWeatherIndicator currentCondition={this.props.weather.currentCondition}
-                location={this.props.weather.location} />}
-            <WeatherDetails weather={this.props.weather} />
-            {this.props.weather.forecastItems && <WeatherForecastList weatherForecasts={this.props.weather.forecastItems.slice(0, 5)} />}
-            <Button onClick={this.onLoadWeather} variant="contained" color="primary">load weather</Button>
-            <Button onClick={this.onGetLocations} variant="contained" color="primary">load locations</Button>
+            <CurrentWeatherIndicator currentHourlyForecast={this.props.hourlyForecasts[0]} />
+            {/* location={this.props.weather.location} />} */}
+            <WeatherDetails currentHourlyForecast={this.props.hourlyForecasts[0]} />
+            <WeatherChart hourlyForecasts={this.props.hourlyForecasts} />
+            <WeatherForecastList weatherForecasts={this.props.fiveDayForecasts} />
+            {/* <Button onClick={this.onLoadWeather} variant="contained" color="primary">load weather</Button>
+            <Button onClick={this.onGetLocations} variant="contained" color="primary">load locations</Button> */}
         </div>);
     }
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return { weather: state.weatherPage.weather, locations: state.weatherPage.locations };
+    return {
+        fiveDayForecasts: state.weatherPage.fiveDayForecasts,
+        hourlyForecasts: state.weatherPage.hourlyForecasts,
+        locations: state.weatherPage.locations
+    };
 }
 
 const mapDispatchToProps = dispatch => {

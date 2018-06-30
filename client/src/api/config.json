@@ -1,14 +1,14 @@
 {
-    "yahooWeather": {
-        "protocol": "https",
-        "host": "query.yahooapis.com",
-        "contextRoot": "/public/yql",
-        "queryBody": "q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"chicago, il\")"
-    },
-    "geoBytesAutoCompleteCities": {
-        "basePath": "http://gd.geobytes.com/AutoCompleteCity?q="
-    },
-    "geoBytesNearbyCities": {
-        "basePath": "http://getnearbycities.geobytes.com/GetNearbyCities?"
+    "accuWeather": {
+        "apiKey": "F6OYAmjseydKxZRETejionyZsTJQ3Rba",
+        "location": {
+            "basePath": "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=F6OYAmjseydKxZRETejionyZsTJQ3Rba&q="
+        },
+        "fiveDayForecast": {
+            "basePath": "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"
+        },
+        "hourlyForecast": {
+            "basePath": "http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"
+        }
     }
 }

@@ -8,11 +8,11 @@ export const getLocations = locationText => {
         .then(locationsResponse => locationsResponse.map(location => Location.fromLocationString(location)));
 }
 
-export const getCurrentCityName = (position) => {
+export const getCurrentLocation = (position) => {
     return getCurrentPosition().then(coords => {
-        let queryUrl = config.geoBytesNearbyCities.basePath + "longitude=" + coords.longitude + "&latitude=" + coords.latitude;
+        let queryUrl = config.accuWeather.location.basePath + coords.latitude + "%2C" + coords.longitude;
         return getJSONP(queryUrl)
-    }).then(locationsResponse => Location.fromLocationArr(locationsResponse[0]).getLocationString());
+    }).then(locationsResponse => Location.fromLocationArr(locationsResponse));
 }
 
 const getCurrentPosition = () => {
@@ -20,3 +20,7 @@ const getCurrentPosition = () => {
         return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(position => resolve(position.coords)))
     } else { return Promise.reject("no geo"); }
 }
+
+// export const getLocation = locationKey => {
+
+// }

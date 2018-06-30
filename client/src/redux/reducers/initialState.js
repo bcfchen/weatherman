@@ -4,10 +4,8 @@ import Location from "../../models/Location";
 const initialState = {
 	ui: {
 		weatherPage: {
-			weather: {
-				currentCondition: new Condition(),
-				location: new Location()
-			},
+			fiveDayForecasts: [],
+			hourlyForecasts: [],
 			locations: []
 		}
 	},

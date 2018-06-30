@@ -1,20 +1,20 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 
-const WeatherDetails = ({ weather }) => {
+const WeatherDetails = ({ currentHourlyForecast }) => {
     return (
         <Grid container>
             <Grid item xs>
                 <div>Humidity</div>
-                <div>{weather.atmosphere && weather.getHumidity() + "%"}</div>
+                <div>{currentHourlyForecast && currentHourlyForecast.humidity}</div>
             </Grid>
             <Grid item xs>
                 <div>Wind</div>
-                <div>{weather.atmosphere && weather.getWindSpeed() + " MPH"}</div>
+                <div>{currentHourlyForecast && currentHourlyForecast.windSpeed}</div>
             </Grid>
             <Grid item xs>
-                <div>Pressure</div>
-                <div>{weather.atmosphere && weather.getPressure() + " mb"}</div>
+                <div>UV Index</div>
+                <div>{currentHourlyForecast && currentHourlyForecast.uvIndex}</div>
             </Grid>
         </Grid>
     );
