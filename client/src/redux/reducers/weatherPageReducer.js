@@ -6,7 +6,7 @@ export default function weatherPageReducer(state = initialState.ui.weatherPage, 
     switch (action.type) {
         case types.LOAD_WEATHER_SUCCESS:
             newState = { ...state };
-            newState.weather = Object.assign({}, action.weather);
+            newState.weather = action.weather;
             break;
         case types.GET_LOCATIONS_SUCCESS:
             newState = { ...state };

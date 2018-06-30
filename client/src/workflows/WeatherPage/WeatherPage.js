@@ -6,7 +6,8 @@ import * as locationActions from "../../redux/actions/locationActions";
 import { bindActionCreators } from "redux";
 import WeatherForecastList from "../../components/WeatherForecastList/WeatherForecastList";
 import CurrentWeatherIndicator from "../../components/CurrentWeatherIndicator/CurrentWeatherIndicator";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import WeatherDetails from "../../components/WeatherDetails/WeatherDetails";
+
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
@@ -26,9 +27,10 @@ class WeatherPage extends React.Component {
 
     render() {
         return (<div className="weather-body">
-            {!this.props.weather.forecastItems && <CircularProgress />}
-            {this.props.weather.location && <CurrentWeatherIndicator currentCondition={this.props.weather.currentCondition} location={this.props.weather.location} />}
-            {this.props.weather.forecastItems && <WeatherForecastList weatherForecasts={this.props.weather.forecastItems} />}
+            {this.props.weather.location && <CurrentWeatherIndicator currentCondition={this.props.weather.currentCondition}
+                location={this.props.weather.location} />}
+            <WeatherDetails weather={this.props.weather} />
+            {this.props.weather.forecastItems && <WeatherForecastList weatherForecasts={this.props.weather.forecastItems.slice(0, 5)} />}
             <Button onClick={this.onLoadWeather} variant="contained" color="primary">load weather</Button>
             <Button onClick={this.onGetLocations} variant="contained" color="primary">load locations</Button>
         </div>);

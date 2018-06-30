@@ -6,13 +6,16 @@ const CurrentWeatherIndicator = ({ currentCondition, location }) => {
     return (
         <div className="current-weather-indicator-container">
             <Typography variant="display2" gutterBottom>
+                {currentCondition.getTime()}
+            </Typography>
+            <Typography variant="display2" gutterBottom>
                 {location.getLocationString()}
             </Typography>
             <Typography variant="display1" gutterBottom>
-                {currentCondition.text}
+                {currentCondition.temp}
             </Typography>
             <Typography variant="display1" gutterBottom>
-                {currentCondition.temp}
+                {currentCondition.text}
             </Typography>
         </div>
     );

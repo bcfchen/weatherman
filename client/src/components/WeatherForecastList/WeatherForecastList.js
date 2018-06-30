@@ -1,14 +1,17 @@
 import React from "react";
 import List from "@material-ui/core/List";
 import WeatherForecastItem from "../WeatherForecastItem/WeatherForecastItem";
+import Grid from '@material-ui/core/Grid';
 
 const WeatherForecastList = ({ weatherForecasts }) => {
-    let counter = 0;
-    let forecastItemRows = weatherForecasts.map(forecastItem => {
-        counter++;
-        return <WeatherForecastItem key={counter} forecastItem={forecastItem} itemIndex={counter} />;
-    });
-    return (< List component="nav">{forecastItemRows}</List>);
+    let gridItems = weatherForecasts.map(forecast =>
+        <Grid item xs>
+            <WeatherForecastItem forecastItem={forecast} />
+        </Grid>);
+    return (
+        <Grid container>
+            {gridItems}
+        </Grid>);
 }
 
 export default WeatherForecastList;
