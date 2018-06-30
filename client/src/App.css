@@ -1,7 +1,9 @@
 @import url(../node_modules/react-select/dist/react-select.css);
 .weather-body {
+  padding-top: 20px;
   background: linear-gradient(gray, black);
-  color: white; }
+  color: white;
+  height: 100vh; }
 
 * {
   margin: 0;

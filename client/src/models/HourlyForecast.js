@@ -12,7 +12,7 @@ class HourlyForecast {
     }
 
     getHoursAndMinutes() {
-        return moment(this.dateTime).format("HH:mm A");
+        return moment(this.dateTime).format("h:mm A");
     }
 
     getLocationString() {

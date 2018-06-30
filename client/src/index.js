@@ -8,13 +8,9 @@ const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <div>
-            <Router>
-                <div>
-                    <Route exact path="/" component={App} />
-                </div>
-            </Router>
-        </div>
+        <Router>
+            <Route exact path="/" component={App} />
+        </Router>
     </Provider>,
     document.getElementById('root')
 );

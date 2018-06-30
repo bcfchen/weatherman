@@ -5,8 +5,16 @@ import HighchartsReact from "highcharts-react-official";
 
 const WeatherChart = ({ hourlyForecasts }) => {
     const options = {
+        responsive: {
+            rules: [{
+                condition: {
+                    maxHeight: 1
+                }
+            }]
+        },
         chart: {
-            backgroundColor: null
+            backgroundColor: null,
+            height: "200px"
         },
         title: {
             text: null,
