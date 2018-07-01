@@ -9,6 +9,7 @@ const initialState = {
 			locations: []
 		}
 	},
+	ajaxCallsInProgress: 0,
 	server: {}
 };
 

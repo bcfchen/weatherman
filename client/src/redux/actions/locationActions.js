@@ -1,6 +1,7 @@
 import * as types from "../constants/action-types";
 import { getLocations, getCurrentLocation } from "../../api/locationApi/locationApi";
 import Location from "../../models/Location";
+import { beginAjaxCall } from "./ajaxStatusActions";
 
 export const getLocationsSuccess = locations => {
     return { type: types.GET_LOCATIONS_SUCCESS, locations };
@@ -16,6 +17,7 @@ export const currentLocationUpdated = newCurrentLocation => {
 
 export const getSuggestedLocations = locationText => {
     return (dispatch) => {
+        dispatch(beginAjaxCall());
         return getLocations(locationText).then(locations => {
             dispatch(getLocationsSuccess(locations));
         }).catch(error => {
@@ -26,12 +28,14 @@ export const getSuggestedLocations = locationText => {
 
 export const updateCurrentLocation = selectedLocation => {
     return (dispatch) => {
+        dispatch(beginAjaxCall());
         dispatch(currentLocationUpdated(Location.fromSelectedLocation(selectedLocation)));
     }
 }
 
 export const loadCurrentLocation = () => {
     return (dispatch) => {
+        dispatch(beginAjaxCall());
         return getCurrentLocation().then(location => {
             dispatch(getCurrentLocationSuccess(location));
         });

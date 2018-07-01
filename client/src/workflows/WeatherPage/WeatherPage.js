@@ -8,6 +8,7 @@ import CurrentWeatherIndicator from "../../components/CurrentWeatherIndicator/Cu
 import WeatherDetails from "../../components/WeatherDetails/WeatherDetails";
 import WeatherChart from "../../components/WeatherChart/WeatherChart";
 import LocationSearch from "../../components/LocationSearch/LocationSearch";
+import ReactPullToRefresh from "react-pull-to-refresh";
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
@@ -34,16 +35,28 @@ class WeatherPage extends React.Component {
         }
     }
 
+    handleRefresh(resolve, reject) {
+        // do some async code here
+        if (success) {
+            resolve();
+        } else {
+            reject();
+        }
+    }
+
     render() {
-        return (<div className="weather-body">
-            <LocationSearch currentLocation={this.props.currentLocation}
-                onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations}
-                onInputChanged={this.getSuggestedLocations} />
-            <CurrentWeatherIndicator currentHourlyForecast={this.props.hourlyForecasts[0]} />
-            <WeatherDetails currentHourlyForecast={this.props.hourlyForecasts[0]} />
-            <WeatherChart hourlyForecasts={this.props.hourlyForecasts} />
-            <WeatherForecastList weatherForecasts={this.props.fiveDayForecasts} />
-        </div>);
+        return (
+            <ReactPullToRefresh onRefresh={this.handleRefresh}>
+                <div className="weather-body">
+                    <LocationSearch currentLocation={this.props.currentLocation}
+                        onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations}
+                        onInputChanged={this.getSuggestedLocations} />
+                    <CurrentWeatherIndicator currentHourlyForecast={this.props.hourlyForecasts[0]} />
+                    <WeatherDetails currentHourlyForecast={this.props.hourlyForecasts[0]} />
+                    <WeatherChart hourlyForecasts={this.props.hourlyForecasts} />
+                    <WeatherForecastList weatherForecasts={this.props.fiveDayForecasts} />
+                </div>
+            </ReactPullToRefresh>);
     }
 }
 

@@ -14,7 +14,7 @@ const WeatherChart = ({ hourlyForecasts }) => {
         },
         chart: {
             backgroundColor: null,
-            height: "200px"
+            height: "180px"
         },
         title: {
             text: null,

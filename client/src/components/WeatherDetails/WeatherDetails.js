@@ -1,20 +1,21 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const WeatherDetails = ({ currentHourlyForecast }) => {
     return (
-        <Grid container>
-            <Grid item xs className="weather-details-item-container">
-                <div>Humidity</div>
-                <div>{currentHourlyForecast && currentHourlyForecast.humidity}</div>
+        <Grid container className="weather-details-item-container">
+            <Grid item xs>
+                <Typography variant="subheading">Humidity</Typography>
+                <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.humidity}</Typography>
             </Grid>
-            <Grid item xs className="weather-details-item-container">
-                <div>Wind</div>
-                <div>{currentHourlyForecast && currentHourlyForecast.windSpeed}</div>
+            <Grid item xs>
+                <Typography variant="subheading">Wind</Typography>
+                <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.windSpeed}</Typography>
             </Grid>
-            <Grid item xs className="weather-details-item-container">
-                <div>UV Index</div>
-                <div>{currentHourlyForecast && currentHourlyForecast.uvIndex}</div>
+            <Grid item xs>
+                <Typography variant="subheading">UV Index</Typography>
+                <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.uvIndex}</Typography>
             </Grid>
         </Grid>
     );

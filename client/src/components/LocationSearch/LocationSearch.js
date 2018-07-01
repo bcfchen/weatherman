@@ -1,9 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import Select from "react-select";
-import * as locationActions from "../../redux/actions/locationActions";
-import * as weatherActions from "../../redux/actions/weatherActions";
 import { Async } from 'react-select';
 import { getLocations } from "../../api/locationApi/locationApi";
 
@@ -40,8 +35,6 @@ const LocationSearch = ({ currentLocation, suggestedLocations, onLocationSelecte
             value={currentLocationDisplay}
             loadOptions={loadSuggestedLocations}
             onChange={onLocationSelected}
-        // onInputChange={onInputChanged}
-        // options={locationOptions}
         />
     );
 }
