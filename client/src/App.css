@@ -3,7 +3,8 @@
   padding-top: 20px;
   background: linear-gradient(gray, black);
   color: white;
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
 
 * {
   margin: 0;

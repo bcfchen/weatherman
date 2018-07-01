@@ -16,6 +16,14 @@ export default function weatherPageReducer(state = initialState.ui.weatherPage, 
             newState = { ...state };
             newState.locations = action.locations.slice();
             break;
+        case types.GET_CURRENT_LOCATION_SUCCESS:
+            newState = { ...state };
+            newState.currentLocation = action.currentLocation;
+            break;
+        case types.CURRENT_LOCATION_UPDATED:
+            newState = { ...state };
+            newState.currentLocation = action.newCurrentLocation;
+            break;
         default:
             break;
     }

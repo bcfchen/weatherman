@@ -17,10 +17,10 @@ export const getFiveDayForecasts = locationKey => {
     });
 };
 
-export const getHourlyForecasts = location => {
-    let queryUrl = config.accuWeather.hourlyForecast.basePath + location.key + "?metric=true&details=true&apikey=" + config.accuWeather.apiKey;
+export const getHourlyForecasts = locationKey => {
+    let queryUrl = config.accuWeather.hourlyForecast.basePath + locationKey + "?metric=true&details=true&apikey=" + config.accuWeather.apiKey;
     return getJSON(queryUrl).then(response => {
         let forecastResponses = response.data;
-        return forecastResponses.map(forecastResponse => new HourlyForecast(forecastResponse, location))
+        return forecastResponses.map(forecastResponse => new HourlyForecast(forecastResponse))
     });
 }

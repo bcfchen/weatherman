@@ -6,10 +6,6 @@ import LocationSearch from "../LocationSearch/LocationSearch";
 const CurrentWeatherIndicator = ({ currentHourlyForecast, location }) => {
     return (
         <div className="current-weather-indicator-container">
-            <Typography variant="display1" gutterBottom>
-                {currentHourlyForecast && currentHourlyForecast.getHoursAndMinutes()}
-            </Typography>
-            {currentHourlyForecast && <LocationSearch initialLocation={currentHourlyForecast.getLocationString()} />}
             <Typography variant="display4">
                 {currentHourlyForecast && currentHourlyForecast.temperature}
             </Typography>

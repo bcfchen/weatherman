@@ -10,9 +10,9 @@ export const loadHourlyForecastsSuccess = hourlyForecasts => {
     return { type: types.LOAD_HOURLY_FORECASTS_SUCCESS, hourlyForecasts };
 };
 
-export const loadHourlyForecasts = locationObj => {
+export const loadHourlyForecasts = locationKey => {
     return (dispatch) => {
-        getHourlyForecasts(locationObj).then(hourlyForecasts => {
+        getHourlyForecasts(locationKey).then(hourlyForecasts => {
             dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
         });
     };
@@ -21,7 +21,7 @@ export const loadHourlyForecasts = locationObj => {
 export const loadCurrentLocationHourlyForecasts = () => {
     return (dispatch) => {
         return getCurrentLocation().then(location => {
-            return getHourlyForecasts(location);
+            return getHourlyForecasts(location.key);
         }).then(hourlyForecasts => {
             dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
         });

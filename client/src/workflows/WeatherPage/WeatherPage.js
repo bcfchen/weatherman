@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import * as weatherActions from "../../redux/actions/weatherActions";
 import * as locationActions from "../../redux/actions/locationActions";
@@ -8,33 +7,42 @@ import WeatherForecastList from "../../components/WeatherForecastList/WeatherFor
 import CurrentWeatherIndicator from "../../components/CurrentWeatherIndicator/CurrentWeatherIndicator";
 import WeatherDetails from "../../components/WeatherDetails/WeatherDetails";
 import WeatherChart from "../../components/WeatherChart/WeatherChart";
+import LocationSearch from "../../components/LocationSearch/LocationSearch";
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
         super(props.context);
-        this.onLoadWeather = this.onLoadWeather.bind(this);
-        this.onGetLocations = this.onGetLocations.bind(this);
+        this.loadWeather = this.loadWeather.bind(this);
+        this.getSuggestedLocations = this.getSuggestedLocations.bind(this);
+        props.locationActions.loadCurrentLocation();
         props.weatherActions.loadCurrentLocationHourlyForecasts();
         props.weatherActions.loadFiveDayForecasts();
     }
 
-    onLoadWeather() {
-        this.props.weatherActions.loadWeather("90403");
+    loadWeather(selectedLocation) {
+        if (selectedLocation) {
+            this.props.weatherActions.loadFiveDayForecasts(selectedLocation.value);
+            this.props.weatherActions.loadHourlyForecasts(selectedLocation.value);
+            this.props.locationActions.updateCurrentLocation(selectedLocation);
+        }
     }
 
-    onGetLocations() {
-        this.props.locationActions.getSuggestedLocations("chi");
+    getSuggestedLocations(inputText) {
+        if (inputText && inputText.length > 0) {
+            this.props.locationActions.updateCurrentLocation(inputText);
+            this.props.locationActions.getSuggestedLocations(inputText);
+        }
     }
 
     render() {
         return (<div className="weather-body">
+            <LocationSearch currentLocation={this.props.currentLocation}
+                onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations}
+                onInputChanged={this.getSuggestedLocations} />
             <CurrentWeatherIndicator currentHourlyForecast={this.props.hourlyForecasts[0]} />
-            {/* location={this.props.weather.location} />} */}
             <WeatherDetails currentHourlyForecast={this.props.hourlyForecasts[0]} />
             <WeatherChart hourlyForecasts={this.props.hourlyForecasts} />
             <WeatherForecastList weatherForecasts={this.props.fiveDayForecasts} />
-            {/* <Button onClick={this.onLoadWeather} variant="contained" color="primary">load weather</Button>
-            <Button onClick={this.onGetLocations} variant="contained" color="primary">load locations</Button> */}
         </div>);
     }
 }
@@ -43,7 +51,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         fiveDayForecasts: state.weatherPage.fiveDayForecasts,
         hourlyForecasts: state.weatherPage.hourlyForecasts,
-        locations: state.weatherPage.locations
+        locations: state.weatherPage.locations,
+        currentLocation: state.weatherPage.currentLocation
     };
 }
 

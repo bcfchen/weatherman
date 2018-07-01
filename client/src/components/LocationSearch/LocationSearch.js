@@ -4,65 +4,46 @@ import { bindActionCreators } from "redux";
 import Select from "react-select";
 import * as locationActions from "../../redux/actions/locationActions";
 import * as weatherActions from "../../redux/actions/weatherActions";
+import { Async } from 'react-select';
+import { getLocations } from "../../api/locationApi/locationApi";
 
-class LocationSearch extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+const LocationSearch = ({ currentLocation, suggestedLocations, onLocationSelected, onInputChanged }) => {
+    let currentLocationDisplay = {
+        value: currentLocation ? currentLocation.key : null,
+        label: currentLocation ? currentLocation.getLocationString() : null
+    };
 
-    onLocationSelected = selectedLocation => {
-        if (selectedLocation) {
-            let selectedLocationObj = this.props.locations.filter(loc => loc.key === selectedLocation.value)[0];
-            this.props.weatherActions.loadFiveDayForecasts(selectedLocationObj.key);
-            this.props.weatherActions.loadHourlyForecasts(selectedLocationObj);
+    let locationOptions = suggestedLocations.map(location => {
+        return {
+            value: location.key,
+            label: location.getLocationString()
         }
-    }
+    });
 
-    onInputChange = inputText => {
-        if (inputText && inputText.length > 0) {
-            this.props.locationActions.getSuggestedLocations(inputText);
-        }
-    }
-
-    render() {
-        const { hourlyForecasts, locations } = this.props;
-        let currentLocation = hourlyForecasts[0].location;
-        let currentVal = {
-            value: currentLocation.key,
-            label: currentLocation.getLocationString()
-        };
-
-        let locationOptions = locations.map(location => {
+    let loadSuggestedLocations = inputText => {
+        return getLocations(inputText).then(locations => {
+            let locationOptions = locations.map(location => {
+                return {
+                    value: location.key,
+                    label: location.getLocationString()
+                }
+            });
             return {
-                value: location.key,
-                label: location.getLocationString()
-            }
+                options: locationOptions
+            };
         });
-
-        return (
-            <Select
-                name="location"
-                value={currentVal}
-                onChange={this.onLocationSelected}
-                onInputChange={this.onInputChange}
-                options={locationOptions}
-            />
-        );
     }
+
+    return (
+        <Async
+            name="location"
+            value={currentLocationDisplay}
+            loadOptions={loadSuggestedLocations}
+            onChange={onLocationSelected}
+        // onInputChange={onInputChanged}
+        // options={locationOptions}
+        />
+    );
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        hourlyForecasts: state.weatherPage.hourlyForecasts,
-        locations: state.weatherPage.locations
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        locationActions: bindActionCreators(locationActions, dispatch),
-        weatherActions: bindActionCreators(weatherActions, dispatch)
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LocationSearch);
+export default LocationSearch;

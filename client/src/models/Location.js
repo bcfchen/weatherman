@@ -7,8 +7,15 @@ class Location {
     }
 
     getLocationString() {
-        let hasInfo = this.city && this.region;
-        return hasInfo ? this.city + ", " + this.country : "";
+        let locationText = this.city;
+        if (this.country) {
+            locationText += ", " + this.country;
+        }
+        return locationText;
+    }
+
+    static fromSelectedLocation(selectedLocation) {
+        return new Location(selectedLocation.label, "", "", selectedLocation.value);
     }
 
     static fromLocationString(locationStr) {
