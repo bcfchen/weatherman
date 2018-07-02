@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MdRefresh from "react-icons/lib/md/refresh";
 import Grow from '@material-ui/core/Grow';
 
-const CurrentWeatherIndicator = ({ isLoading, currentHourlyForecast, location, handleRefresh }) => {
+const CurrentWeatherIndicator = ({ isLoading, currentHourlyForecast, handleRefresh }) => {
     let refreshIconClass = isLoading ? "rotating" : "";
     return (
         <Grow in={!isLoading}>

@@ -37,7 +37,6 @@ class WeatherPage extends React.Component {
     }
 
     handleRefresh() {
-        this.setState({ isLoading: true });
         this.props.locationActions.loadCurrentLocation();
         this.props.weatherActions.loadCurrentLocationHourlyForecasts();
         this.props.weatherActions.loadFiveDayForecasts();
