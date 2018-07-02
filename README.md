@@ -9,7 +9,7 @@ Application features include:
 - User can search for any location by clicking on the location label
 - background color changes depending on daytime/nighttime
 
-#### To run
+### To run
 Clone this repo with 
 ```
 git clone https://github.com/bcfchen/weatherman
@@ -23,7 +23,7 @@ Run the project by:
 npm start
 ```
 The page should automatically open up in your browser at __localhost:3000__
-#### To use
+### To use
 Navigate to localhost:3000 (if not there already) to view current weather
 ![alt text](https://s8.postimg.cc/lzca12svp/Screen_Shot_2018-07-02_at_1.23.17_AM.png "Nighttime Screenshot")
 
@@ -36,7 +36,7 @@ Click on location name to search for new location. If new location is currently 
 Click on refresh icon below current temperature to reload data
 
 
-#### Main libraries & services used
+### Main libraries & services used
 - __React/Redux__
 - __Material-ui__ for components and typography
 - __Accuweather__ for weather data
