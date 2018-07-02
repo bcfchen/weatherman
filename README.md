@@ -2,12 +2,13 @@
 
 ![alt text](https://images-na.ssl-images-amazon.com/images/I/51JTWC5Y4HL.jpg "Weather Man Logo")
 ## Weather forecasts. Anywhere. Anytime.
-Application features include:
+Application features:
 - Displays weather conditions for current location by default
 - Provides temperature forecast visualization for the next 12 hours 
 - Shows weather forecast for the next 5 days
 - User can search for any location by clicking on the location label
 - Background color changes depending on daytime/nighttime
+- App was mainly designed with __mobile web__ in mind but of course, runs on desktop as well
 
 ### To run
 Clone this repo with 
