@@ -27,8 +27,10 @@ The page should automatically open up in your browser at __localhost:3000__
 Navigate to localhost:3000 (if not there already) to view current weather
 ![alt text](https://s8.postimg.cc/lzca12svp/Screen_Shot_2018-07-02_at_1.23.17_AM.png "Nighttime Screenshot")
 
+
 Click on location name to search for new location
 ![alt text](https://s8.postimg.cc/3jrt3pp1x/Screen_Shot_2018-07-02_at_1.19.50_AM.png "Search Screenshot")
+
 
 If new location is currently daytime, background will change to daytime theme
 ![alt text](https://s8.postimg.cc/dh2twr9id/Screen_Shot_2018-07-02_at_1.21.32_AM.png "Daytime Screenshot")
