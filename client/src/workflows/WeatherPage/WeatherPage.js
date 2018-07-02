@@ -8,12 +8,13 @@ import CurrentWeatherIndicator from "../../components/CurrentWeatherIndicator/Cu
 import WeatherDetails from "../../components/WeatherDetails/WeatherDetails";
 import WeatherChart from "../../components/WeatherChart/WeatherChart";
 import LocationSearch from "../../components/LocationSearch/LocationSearch";
-import ReactPullToRefresh from "react-pull-to-refresh";
+import Grow from '@material-ui/core/Grow';
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
         super(props.context);
         this.loadWeather = this.loadWeather.bind(this);
+        this.handleRefresh = this.handleRefresh.bind(this);
         this.getSuggestedLocations = this.getSuggestedLocations.bind(this);
         props.locationActions.loadCurrentLocation();
         props.weatherActions.loadCurrentLocationHourlyForecasts();
@@ -35,28 +36,26 @@ class WeatherPage extends React.Component {
         }
     }
 
-    handleRefresh(resolve, reject) {
-        // do some async code here
-        if (success) {
-            resolve();
-        } else {
-            reject();
-        }
+    handleRefresh() {
+        this.setState({ isLoading: true });
+        this.props.locationActions.loadCurrentLocation();
+        this.props.weatherActions.loadCurrentLocationHourlyForecasts();
+        this.props.weatherActions.loadFiveDayForecasts();
     }
 
     render() {
+        let isLocationLoaded = this.props.currentLocation == true;
+
         return (
-            <ReactPullToRefresh onRefresh={this.handleRefresh}>
-                <div className="weather-body">
-                    <LocationSearch currentLocation={this.props.currentLocation}
-                        onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations}
-                        onInputChanged={this.getSuggestedLocations} />
-                    <CurrentWeatherIndicator currentHourlyForecast={this.props.hourlyForecasts[0]} />
-                    <WeatherDetails currentHourlyForecast={this.props.hourlyForecasts[0]} />
-                    <WeatherChart hourlyForecasts={this.props.hourlyForecasts} />
-                    <WeatherForecastList weatherForecasts={this.props.fiveDayForecasts} />
-                </div>
-            </ReactPullToRefresh>);
+            <div className="weather-body">
+                <LocationSearch currentLocation={this.props.currentLocation}
+                    onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations} />
+                <CurrentWeatherIndicator handleRefresh={this.handleRefresh} isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
+                <WeatherDetails isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
+                <WeatherChart isLoading={this.props.isLoading} hourlyForecasts={this.props.hourlyForecasts} />
+                <WeatherForecastList isLoading={this.props.isLoading} weatherForecasts={this.props.fiveDayForecasts} />
+            </div>
+        );
     }
 }
 
@@ -65,7 +64,8 @@ const mapStateToProps = (state, ownProps) => {
         fiveDayForecasts: state.weatherPage.fiveDayForecasts,
         hourlyForecasts: state.weatherPage.hourlyForecasts,
         locations: state.weatherPage.locations,
-        currentLocation: state.weatherPage.currentLocation
+        currentLocation: state.weatherPage.currentLocation,
+        isLoading: state.ajaxCallsInProgress > 0
     };
 }
 

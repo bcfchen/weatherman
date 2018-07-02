@@ -43,12 +43,11 @@ const WeatherChart = ({ hourlyForecasts }) => {
         }]
     }
 
-    return (<div>
+    return (
         <HighchartsReact
             highcharts={Highcharts}
             options={options}
-        />
-    </div>);
+        />);
 }
 
 export default WeatherChart;

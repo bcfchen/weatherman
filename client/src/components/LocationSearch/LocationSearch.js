@@ -2,7 +2,7 @@ import React from "react";
 import { Async } from 'react-select';
 import { getLocations } from "../../api/locationApi/locationApi";
 
-const LocationSearch = ({ currentLocation, suggestedLocations, onLocationSelected, onInputChanged }) => {
+const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocationSelected }) => {
     let currentLocationDisplay = {
         value: currentLocation ? currentLocation.key : null,
         label: currentLocation ? currentLocation.getLocationString() : null
@@ -23,9 +23,7 @@ const LocationSearch = ({ currentLocation, suggestedLocations, onLocationSelecte
                     label: location.getLocationString()
                 }
             });
-            return {
-                options: locationOptions
-            };
+            return { options: locationOptions };
         });
     }
 
