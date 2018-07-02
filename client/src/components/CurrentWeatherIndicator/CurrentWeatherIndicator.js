@@ -13,7 +13,6 @@ const CurrentWeatherIndicator = ({ isLoading, currentHourlyForecast, location, h
                 <Typography variant="display4">
                     {currentHourlyForecast && currentHourlyForecast.temperature}
                 </Typography>
-
                 <Typography variant="headline" gutterBottom>
                     {currentHourlyForecast && currentHourlyForecast.text}
                     <MdRefresh className={refreshIconClass} onClick={handleRefresh} />

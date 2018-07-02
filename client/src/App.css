@@ -1,10 +1,33 @@
 @import url(../node_modules/react-select/dist/react-select.css);
-.weather-body {
+.weather-body, .weather-body-day, .weather-body-night {
   padding-top: 20px;
-  background: linear-gradient(gray, black);
-  color: white;
   height: 100vh;
-  text-align: center; }
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  position: relative;
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.weather-body-day {
+  background: #f46b45;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #eea849, #f46b45);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #eea849, #f46b45);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.weather-body-night {
+  background: #141E30;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 * {
   margin: 0;
@@ -13,10 +36,16 @@
 body {
   color: white; }
 
+.blur {
+  -webkit-filter: url(#blur-filter);
+  filter: url(#blur-filter);
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
+
 .current-weather-indicator-container {
   color: white;
   text-align: center;
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
 
 @-webkit-keyframes rotating {
   from {
@@ -27,25 +56,18 @@ body {
 .rotating {
   -webkit-animation: rotating 2s linear infinite; }
 
+.weather-forecast-items-container {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.forecast-low {
+  opacity: 0.4; }
+
 .weather-details-item-container {
   max-width: 350px;
   margin-right: auto;
   margin-left: auto; }
-
-div .Select-control > .Select-value {
-  background-color: red;
-  border: 1px solid rgba(153, 153, 153, 0.24);
-  color: red; }
-
-div .Select-control > .Select-value > .Select-value-icon {
-  border-right: 1px solid rgba(153, 153, 153, 0.24); }
-
-div .Select-control > .Select-value > .Select-value-label, .Select-value > a {
-  color: red; }
-
-div .Select-value {
-  background-color: transparent !important;
-  padding: 0 !important; }
 
 div.is-focused > .Select-control {
   background-color: transparent !important; }
@@ -69,6 +91,10 @@ div .is-open {
 
 .Select-arrow-zone {
   display: none; }
+
+.Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+  padding-left: 0;
+  padding-right: 0px; }
 
 html {
   background-color: #f2f2f2; }

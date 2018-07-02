@@ -9,6 +9,7 @@ class HourlyForecast {
         this.humidity = properties.RelativeHumidity + " %";
         this.uvIndex = properties.UVIndex;
         this.location = location;
+        this.isDaylight = properties.IsDaylight;
     }
 
     getHoursAndMinutes() {

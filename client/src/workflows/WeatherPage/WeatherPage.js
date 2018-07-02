@@ -8,7 +8,7 @@ import CurrentWeatherIndicator from "../../components/CurrentWeatherIndicator/Cu
 import WeatherDetails from "../../components/WeatherDetails/WeatherDetails";
 import WeatherChart from "../../components/WeatherChart/WeatherChart";
 import LocationSearch from "../../components/LocationSearch/LocationSearch";
-import Grow from '@material-ui/core/Grow';
+import ProgressIndicator from "../../components/ProgressIndicator/ProgressIndicator";
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
@@ -43,17 +43,25 @@ class WeatherPage extends React.Component {
         this.props.weatherActions.loadFiveDayForecasts();
     }
 
-    render() {
-        let isLocationLoaded = this.props.currentLocation == true;
+    getBodyClassName(currentHourConditions) {
+        if (!currentHourConditions) { return "weather-body"; }
+        return currentHourConditions.isDaylight ? "weather-body-day" : "weather-body-night";
+    }
 
+    render() {
+        let blurblur = this.props.isLoading ? "blur" : "";
+        let bodyClassName = this.getBodyClassName(this.props.hourlyForecasts[0]);
         return (
-            <div className="weather-body">
-                <LocationSearch currentLocation={this.props.currentLocation}
-                    onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations} />
-                <CurrentWeatherIndicator handleRefresh={this.handleRefresh} isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
-                <WeatherDetails isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
-                <WeatherChart isLoading={this.props.isLoading} hourlyForecasts={this.props.hourlyForecasts} />
-                <WeatherForecastList isLoading={this.props.isLoading} weatherForecasts={this.props.fiveDayForecasts} />
+            <div className={bodyClassName}>
+                {this.props.isLoading && <ProgressIndicator />}
+                <div className={blurblur}>
+                    <LocationSearch currentLocation={this.props.currentLocation}
+                        onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations} />
+                    <CurrentWeatherIndicator handleRefresh={this.handleRefresh} isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
+                    <WeatherDetails isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
+                    <WeatherChart isLoading={this.props.isLoading} hourlyForecasts={this.props.hourlyForecasts} />
+                    <WeatherForecastList isLoading={this.props.isLoading} weatherForecasts={this.props.fiveDayForecasts} />
+                </div>
             </div>
         );
     }

@@ -2,52 +2,31 @@ import React from "react";
 import { render } from "react-dom";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-
-const WeatherChart = ({ hourlyForecasts }) => {
-    const options = {
-        responsive: {
-            rules: [{
-                condition: {
-                    maxHeight: 1
-                }
-            }]
-        },
-        chart: {
-            backgroundColor: null,
-            height: "180px"
-        },
-        title: {
-            text: null,
-        },
-        tooltip: {
-            enabled: false
-        },
-        xAxis: {
-            visible: false
-        },
-        yAxis: {
-            visible: false
-        },
-        plotOptions: {
-            series: {
-                showInLegend: false,
-                marker: {
-                    enabled: false
-                }
-            }
-        },
-        series: [{
-            data: hourlyForecasts.map(forecast => forecast.temperature),
-            type: "spline",
-            color: "#fff"
-        }]
-    }
+import { withStyles } from '@material-ui/core/styles';
+import Grow from '@material-ui/core/Grow';
+import weatherChartConfig from "./WeatherChartConfig";
+const WeatherChart = ({ isLoading, hourlyForecasts }) => {
+    let series = [{
+        data: hourlyForecasts.map(forecast => forecast.temperature),
+        type: "spline",
+        color: "#fff"
+    }];
+    let configOptions = { ...weatherChartConfig, series };
 
     return (
-        <HighchartsReact
-            highcharts={Highcharts}
-            options={options}
-        />);
+        <Grow in={!isLoading}>
+            <div className="weather-chart">
+                <HighchartsReact
+                    highcharts={Highcharts}
+                    options={configOptions} />
+            </div>
+        </Grow>);
 }
 
-export default WeatherChart;
+const styles = theme => ({
+    "weather-chart": {
+        margin: theme.spacing.unit,
+    }
+});
+
+export default withStyles(styles)(WeatherChart);

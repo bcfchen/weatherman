@@ -1,6 +1,7 @@
 import React from "react";
 import { Async } from 'react-select';
 import { getLocations } from "../../api/locationApi/locationApi";
+import SearchValue from "./SearchValue";
 
 const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocationSelected }) => {
     let currentLocationDisplay = {
@@ -29,10 +30,12 @@ const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocat
 
     return (
         <Async
+            className="async-select"
             name="location"
             value={currentLocationDisplay}
             loadOptions={loadSuggestedLocations}
             onChange={onLocationSelected}
+            valueComponent={SearchValue}
         />
     );
 }

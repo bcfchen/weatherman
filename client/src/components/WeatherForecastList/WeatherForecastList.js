@@ -9,7 +9,7 @@ const WeatherForecastList = ({ weatherForecasts }) => {
             <WeatherForecastItem forecastItem={forecast} />
         </Grid>);
     return (
-        <Grid container>
+        <Grid className="weather-forecast-items-container" container>
             {gridItems}
         </Grid>);
 }
