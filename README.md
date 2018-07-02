@@ -7,7 +7,7 @@ Application features include:
 - Provides temperature forecast visualization for the next 12 hours 
 - Shows weather forecast for the next 5 days
 - User can search for any location by clicking on the location label
-- background color changes depending on daytime/nighttime
+- Background color changes depending on daytime/nighttime
 
 ### To run
 Clone this repo with 
