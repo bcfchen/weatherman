@@ -1,5 +1,5 @@
 import Location from "../../models/Location";
-import { getJSONP, getJSON } from "../baseApi/baseApi";
+import { getJSON } from "../baseApi/baseApi";
 const config = require("../config.json");
 
 export const getLocations = locationText => {
@@ -10,7 +10,6 @@ export const getLocations = locationText => {
             return locations.map(location => Location.fromLocationObj(location))
         });
 }
-
 
 export const getCurrentLocation = (position) => {
     return getCurrentPosition().then(coords => {
@@ -24,7 +23,3 @@ const getCurrentPosition = () => {
         return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(position => resolve(position.coords)))
     } else { return Promise.reject("no geo"); }
 }
-
-// export const getLocation = locationKey => {
-
-// }

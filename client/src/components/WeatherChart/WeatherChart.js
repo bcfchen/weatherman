@@ -1,10 +1,10 @@
 import React from "react";
-import { render } from "react-dom";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import { withStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import weatherChartConfig from "./WeatherChartConfig";
+
 const WeatherChart = ({ isLoading, hourlyForecasts }) => {
     let series = [{
         data: hourlyForecasts.map(forecast => forecast.temperature),

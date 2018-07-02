@@ -9,13 +9,6 @@ const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocat
         label: currentLocation ? currentLocation.getLocationString() : null
     };
 
-    let locationOptions = suggestedLocations.map(location => {
-        return {
-            value: location.key,
-            label: location.getLocationString()
-        }
-    });
-
     let loadSuggestedLocations = inputText => {
         return getLocations(inputText).then(locations => {
             let locationOptions = locations.map(location => {

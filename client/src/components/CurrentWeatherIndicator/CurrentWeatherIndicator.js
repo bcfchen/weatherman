@@ -1,7 +1,6 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import LocationSearch from "../LocationSearch/LocationSearch";
 import MdRefresh from "react-icons/lib/md/refresh";
 import Grow from '@material-ui/core/Grow';
 
