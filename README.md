@@ -26,15 +26,15 @@ npm start
 The page should automatically open up in your browser at __localhost:3000__
 ### To use
 Navigate to localhost:3000 (if not there already) to view current weather
-![alt text](https://s8.postimg.cc/lzca12svp/Screen_Shot_2018-07-02_at_1.23.17_AM.png "Nighttime Screenshot")
+![alt text](https://s8.postimg.cc/dovz9n54l/Screen_Shot_2018-07-03_at_2.03.57_AM.png "Nighttime Screenshot")
 
 
 Click on location name to search for new location. If new location is currently daytime, background will change to daytime theme
 
 
-![alt text](https://s8.postimg.cc/dh2twr9id/Screen_Shot_2018-07-02_at_1.21.32_AM.png "Daytime Screenshot")
+![alt text](https://s8.postimg.cc/5w5bhnjpx/Screen_Shot_2018-07-03_at_2.04.31_AM.png "Daytime Screenshot")
 
-Click on refresh icon below current temperature to reload data
+Drag down anywhere on the page to reload data (for your current location)
 
 
 ### Main libraries & services used
