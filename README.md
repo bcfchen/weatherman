@@ -4,11 +4,17 @@
 ## Weather forecasts. Anywhere. Anytime.
 Application features:
 - Displays weather conditions for current location by default
-- Provides temperature forecast visualization for the next 12 hours 
-- Shows weather forecast for the next 5 days
-- User can search for any location by clicking on the location label
+- Search for location by clicking on the location label
+- Pull down to reload data
+- Trendline to visualize temperature for next 12 hours 
+- Weather forecast for the next 5 days
 - Background color changes depending on daytime/nighttime
-- App was mainly designed with __mobile web__ in mind but of course, runs on desktop as well
+- Development items visible on trello board ![Weatherman Trello](https://trello.com/b/IeEqHBs4/weather-man, "Weatherman Link")
+
+## Assumptions and caveats
+- App was mainly designed with __mobile web__, though dev and testing was done on desktop for convenience
+- Development and testing done on Chrome 67.0.3396.79 
+- Pull down to reload data will reload data for user's current physical location
 
 ### To run
 Clone this repo with 
