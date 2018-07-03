@@ -5,8 +5,9 @@ import SearchValue from "./SearchValue";
 import toast from "toastr";
 import styles from './LocationSearchStyles';
 import { withStyles } from '@material-ui/core/styles';
+import { propTypes } from "./types";
 
-const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocationSelected }) => {
+const LocationSearch = ({ currentLocation, onLocationSelected }) => {
     let currentLocationDisplay = {
         value: currentLocation ? currentLocation.key : null,
         label: currentLocation ? currentLocation.getLocationString() : null
@@ -38,4 +39,5 @@ const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocat
     );
 }
 
+LocationSearch.propTypes = propTypes;
 export default withStyles(styles)(LocationSearch);

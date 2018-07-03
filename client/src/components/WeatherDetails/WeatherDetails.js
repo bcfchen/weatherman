@@ -2,6 +2,7 @@ import React from "react";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Grow from '@material-ui/core/Grow';
+import { propTypes } from "./types";
 
 const WeatherDetails = ({ isLoading, currentHourlyForecast }) => {
     return (
@@ -24,4 +25,5 @@ const WeatherDetails = ({ isLoading, currentHourlyForecast }) => {
     );
 };
 
+WeatherDetails.propTypes = propTypes;
 export default WeatherDetails;
