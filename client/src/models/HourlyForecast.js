@@ -1,5 +1,3 @@
-import moment from "moment";
-
 class HourlyForecast {
     constructor(properties, location) {
         this.temperature = properties.Temperature.Value;
@@ -12,13 +10,7 @@ class HourlyForecast {
         this.isDaylight = properties.IsDaylight;
     }
 
-    getHoursAndMinutes() {
-        return moment(this.dateTime).format("h:mm A");
-    }
-
-    getLocationString() {
-        return this.location.getLocationString();
-    }
+    getLocationString() { return this.location.getLocationString(); }
 }
 
 export default HourlyForecast;

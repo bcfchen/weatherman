@@ -2,6 +2,9 @@ import React from "react";
 import { Async } from 'react-select';
 import { getLocations } from "../../api/locationApi/locationApi";
 import SearchValue from "./SearchValue";
+import toast from "toastr";
+import styles from './LocationSearchStyles';
+import { withStyles } from '@material-ui/core/styles';
 
 const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocationSelected }) => {
     let currentLocationDisplay = {
@@ -10,14 +13,17 @@ const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocat
     };
 
     let loadSuggestedLocations = async (inputText) => {
-        let locations = await getLocations(inputText);
-        let locationOptions = locations.map(location => {
-            return {
-                value: location.key,
-                label: location.getLocationString()
-            }
+        return getLocations(inputText).then(locations => {
+            let locationOptions = locations.map(location => {
+                return {
+                    value: location.key,
+                    label: location.getLocationString()
+                }
+            });
+            return { options: locationOptions };
+        }).catch(err => {
+            toast.error(err);
         });
-        return { options: locationOptions };
     }
 
     return (
@@ -32,4 +38,4 @@ const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocat
     );
 }
 
-export default LocationSearch;
+export default withStyles(styles)(LocationSearch);

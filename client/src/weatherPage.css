@@ -1,5 +1,3 @@
-@import url(../node_modules/toastr/build/toastr.min.css);
-@import url(../node_modules/react-select/dist/react-select.css);
 .weather-body, .weather-body-day, .weather-body-night {
   padding-top: 20px;
   height: 100vh;
@@ -45,37 +43,3 @@ body {
 
 .toast-error {
   background-color: #2f96b4; }
-
-.current-weather-indicator-container {
-  color: white;
-  text-align: center;
-  margin-bottom: 60px; }
-
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-
-.rotating {
-  -webkit-animation: rotating 2s linear infinite; }
-
-.weather-forecast-items-container {
-  max-width: 680px;
-  margin-right: auto;
-  margin-left: auto; }
-
-.forecast-low {
-  opacity: 0.4; }
-
-.weather-details-item-container {
-  max-width: 350px;
-  margin-right: auto;
-  margin-left: auto; }
-
-html {
-  background-color: #f2f2f2; }
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }

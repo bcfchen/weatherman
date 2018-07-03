@@ -8,22 +8,12 @@ class Location {
 
     getLocationString() {
         let locationText = this.city;
-        if (this.country) {
-            locationText += ", " + this.country;
-        }
+        if (this.country) { locationText += ", " + this.country; }
         return locationText;
     }
 
     static fromSelectedLocation(selectedLocation) {
         return new Location(selectedLocation.label, "", "", selectedLocation.value);
-    }
-
-    static fromLocationString(locationStr) {
-        let locationArr = locationStr.split(", ");
-        let city = locationArr[0],
-            region = locationArr[1],
-            country = locationArr[2];
-        return new Location(city, region, country);
     }
 
     static fromLocationObj(accuLocationObj) {
