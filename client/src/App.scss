@@ -4,7 +4,6 @@
 @import "styles/layout/currentWeatherIndicator.scss";
 @import "styles/layout/weatherForecastItem.scss";
 @import "styles/layout/weatherDetails.scss";
-@import "styles/layout/locationSearch.scss";
 
 html {
     background-color: #f2f2f2;
@@ -14,10 +13,3 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-
-// @media (max-width: 568px) {
-//     html {
-//         background-color: #fff;
-//     }
-// }
