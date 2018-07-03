@@ -9,16 +9,15 @@ const LocationSearch = ({ isLoaded, currentLocation, suggestedLocations, onLocat
         label: currentLocation ? currentLocation.getLocationString() : null
     };
 
-    let loadSuggestedLocations = inputText => {
-        return getLocations(inputText).then(locations => {
-            let locationOptions = locations.map(location => {
-                return {
-                    value: location.key,
-                    label: location.getLocationString()
-                }
-            });
-            return { options: locationOptions };
+    let loadSuggestedLocations = async (inputText) => {
+        let locations = await getLocations(inputText);
+        let locationOptions = locations.map(location => {
+            return {
+                value: location.key,
+                label: location.getLocationString()
+            }
         });
+        return { options: locationOptions };
     }
 
     return (

@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
 import MdRefresh from "react-icons/lib/md/refresh";
 import Grow from '@material-ui/core/Grow';
 
@@ -21,10 +20,4 @@ const CurrentWeatherIndicator = ({ isLoading, currentHourlyForecast, handleRefre
     );
 };
 
-const styles = theme => ({
-    "current-weather-indicator-container": {
-        margin: theme.spacing.unit,
-    }
-});
-
-export default withStyles(styles)(CurrentWeatherIndicator);
+export default CurrentWeatherIndicator;

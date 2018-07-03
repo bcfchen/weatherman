@@ -1,7 +1,6 @@
 import React from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import { withStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import weatherChartConfig from "./WeatherChartConfig";
 
@@ -23,10 +22,4 @@ const WeatherChart = ({ isLoading, hourlyForecasts }) => {
         </Grow>);
 }
 
-const styles = theme => ({
-    "weather-chart": {
-        margin: theme.spacing.unit,
-    }
-});
-
-export default withStyles(styles)(WeatherChart);
+export default WeatherChart;

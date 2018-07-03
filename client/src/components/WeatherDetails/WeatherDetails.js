@@ -1,12 +1,11 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import Fade from '@material-ui/core/Fade';
+import Grow from '@material-ui/core/Grow';
 
 const WeatherDetails = ({ isLoading, currentHourlyForecast }) => {
     return (
-        <Fade in={!isLoading}>
+        <Grow in={!isLoading}>
             <Grid container className="weather-details-item-container">
                 <Grid item xs>
                     <Typography variant="subheading">Humidity</Typography>
@@ -21,14 +20,8 @@ const WeatherDetails = ({ isLoading, currentHourlyForecast }) => {
                     <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.uvIndex}</Typography>
                 </Grid>
             </Grid>
-        </Fade>
+        </Grow>
     );
 };
 
-const styles = theme => ({
-    "weather-details-item-container": {
-        margin: theme.spacing.unit,
-    }
-});
-
-export default withStyles(styles)(WeatherDetails);
+export default WeatherDetails;
