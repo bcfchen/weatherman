@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { propTypes } from "./types";
 
 const ProgressIndicator = ({ classes }) => {
     return (
@@ -18,4 +19,5 @@ const styles = theme => ({
     }
 });
 
+ProgressIndicator.propTypes = propTypes;
 export default withStyles(styles)(ProgressIndicator);

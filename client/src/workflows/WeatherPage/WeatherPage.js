@@ -11,6 +11,7 @@ import LocationSearch from "../../components/LocationSearch/LocationSearch";
 import ProgressIndicator from "../../components/ProgressIndicator/ProgressIndicator";
 import toastr from 'toastr';
 import ReactPullToRefresh from "react-pull-to-refresh";
+import { propTypes } from "./types";
 
 class WeatherPage extends React.Component {
     constructor(props, context) {
@@ -66,7 +67,7 @@ class WeatherPage extends React.Component {
                     {this.props.isLoading && <ProgressIndicator />}
                     <div className={blurblur}>
                         <LocationSearch currentLocation={this.props.currentLocation}
-                            onLocationSelected={this.loadWeather} suggestedLocations={this.props.locations} />
+                            onLocationSelected={this.loadWeather} />
                         <CurrentWeatherIndicator isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
                         <WeatherDetails isLoading={this.props.isLoading} currentHourlyForecast={this.props.hourlyForecasts[0]} />
                         <WeatherChart isLoading={this.props.isLoading} hourlyForecasts={this.props.hourlyForecasts} />
@@ -82,7 +83,6 @@ const mapStateToProps = (state, ownProps) => {
     return {
         fiveDayForecasts: state.weatherPage.fiveDayForecasts,
         hourlyForecasts: state.weatherPage.hourlyForecasts,
-        locations: state.weatherPage.locations,
         currentLocation: state.weatherPage.currentLocation,
         isLoading: state.ajaxCallsInProgress > 0
     };
@@ -95,4 +95,5 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
+WeatherPage.propTypes = propTypes;
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherPage);
