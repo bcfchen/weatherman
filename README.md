@@ -9,7 +9,7 @@ Application features:
 - Trendline to visualize temperature for next 12 hours 
 - Weather forecast for the next 5 days
 - Background color changes depending on daytime/nighttime
-- Development items visible on trello board ![Weatherman Trello](https://trello.com/b/IeEqHBs4/weather-man, "Weatherman Link")
+- Development items visible on trello board ![Weatherman Trello](https://trello.com/b/IeEqHBs4/weather-man "Weatherman Link")
 
 ## Assumptions and caveats
 - App was mainly designed with __mobile web__, though dev and testing was done on desktop for convenience
