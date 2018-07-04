@@ -5,7 +5,8 @@ module.exports = function () {
 
     this.Given(/^I am on the weatherman app$/, async () => {
         await this.page.open();
-        return this.page.waitTillPageLoaded();
+        await this.page.waitTillPageLoaded();
+        return;
     });
 
     this.Then(/^I should see the current temperature$/, async () => {
@@ -22,8 +23,19 @@ module.exports = function () {
         return this.page.searchNewLocation(newLocationText);
     });
 
+    this.When(/^I drag down to refresh$/, async () => {
+        await this.page.dragDownToRefresh();
+        await this.page.waitTillPageLoaded();
+        return;
+    });
+
     this.Then(/^I should see the location updated to "([^"]*)"$/, async expectedLocationText => {
         let locationText = await this.page.getCurrentLocationElem().getText();
         expect(locationText.indexOf(expectedLocationText)).to.not.equal(-1);
+    });
+
+    this.Then(/^I should see the location not equal to "([^"]*)"$/, async unexpectedLocationText => {
+        let locationText = await this.page.getCurrentLocationElem().getText();
+        expect(locationText.indexOf(unexpectedLocationText)).to.equal(-1);
     });
 };
