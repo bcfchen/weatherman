@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherForecastItem from "../WeatherForecastItem/WeatherForecastItem";
 import Grid from '@material-ui/core/Grid';
+import { propTypes } from "./types";
 
 const WeatherForecastList = ({ weatherForecasts }) => {
     let counter = 0;
@@ -14,4 +15,5 @@ const WeatherForecastList = ({ weatherForecasts }) => {
         </Grid>);
 }
 
+WeatherForecastList.propTypes = propTypes;
 export default WeatherForecastList;

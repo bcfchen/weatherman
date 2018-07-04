@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from '@material-ui/core/Typography';
 import { getWeatherIcon } from "./WeatherIconMappings";
+import { propTypes } from "./types";
 
 const WeatherForecastItem = ({ forecastItem }) => {
     let icon = getWeatherIcon(forecastItem.text);
@@ -14,4 +15,5 @@ const WeatherForecastItem = ({ forecastItem }) => {
     );
 }
 
+WeatherForecastItem.propTypes = propTypes;
 export default WeatherForecastItem;

@@ -4,13 +4,20 @@
 ## Weather forecasts. Anywhere. Anytime.
 Application features:
 - Displays weather conditions for current location by default
-- Provides temperature forecast visualization for the next 12 hours 
-- Shows weather forecast for the next 5 days
-- User can search for any location by clicking on the location label
+- Search for location by clicking on the location label
+- Pull down to reload data
+- Trendline to visualize temperature for next 12 hours 
+- Weather forecast for the next 5 days
 - Background color changes depending on daytime/nighttime
-- App was mainly designed with __mobile web__ in mind but of course, runs on desktop as well
+- Development items visible on trello board ["Weatherman Trello"](https://trello.com/b/IeEqHBs4/weather-man)
+- __UI automated tests__ covering page load and search by location features
 
-### To run
+## Assumptions and caveats
+- App design mainly targeted __mobile web__, though dev and testing were done on desktop for convenience
+- Development and testing done on Chrome 67.0.3396.79 
+- Pull down to reload data will reload data for user's current physical location
+
+### To install
 Clone this repo with 
 ```
 git clone https://github.com/bcfchen/weatherman
@@ -19,11 +26,21 @@ cd into the __weatherman/client__ folder and install npm packages by:
 ```
 npm install
 ```
-Run the project by:
+
+### To run
+Check that you're in the __weatherman/client__ folder and run the project by:
 ```
 npm start
 ```
 The page should automatically open up in your browser at __localhost:3000__
+
+### To test
+Run the project with the steps above, then run automated test suites by:
+```
+npm run e2e
+```
+The page should automatically open up and run test cases. Coverage report should be displayed after tests are complete
+
 ### To use
 Navigate to localhost:3000 (if not there already) to view current weather
 ![alt text](https://s8.postimg.cc/dovz9n54l/Screen_Shot_2018-07-03_at_2.03.57_AM.png "Nighttime Screenshot")
@@ -43,4 +60,5 @@ Drag down anywhere on the page to reload data (for your current location)
 - __Accuweather__ for weather data
 - __react-select__ for location name search autocomplete 
 - __highcharts__ for temperature visualization
+- __Selenium Webdriver__ and __Cucumber.js__ for automated testing
 

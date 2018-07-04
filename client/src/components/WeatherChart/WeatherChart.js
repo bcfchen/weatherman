@@ -3,6 +3,7 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import Grow from '@material-ui/core/Grow';
 import weatherChartConfig from "./WeatherChartConfig";
+import { propTypes } from "./types";
 
 const WeatherChart = ({ isLoading, hourlyForecasts }) => {
     let series = [{
@@ -22,4 +23,5 @@ const WeatherChart = ({ isLoading, hourlyForecasts }) => {
         </Grow>);
 }
 
+WeatherChart.propTypes = propTypes;
 export default WeatherChart;
