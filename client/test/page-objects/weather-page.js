@@ -10,14 +10,20 @@ class WeatherPageClass {
         return helpers.loadPage(this.url);
     }
 
-    waitTillPageLoaded() {
-        let elem = driver.findElement(by.css(".current-temperature"));
-        return driver.wait(until.elementIsVisible(elem));
-    }
-
-    waitForProgressIndicator() {
+    /* wait for spinning wheel to appear and then disappear to assert page has loaded */
+    async waitTillPageLoaded() {
         let elem = driver.findElement(by.css(".progress-indicator"));
-        return driver.wait(until.elementLocated(elem));
+        await driver.wait(until.elementIsVisible(elem));
+
+        /* 
+         * using this to assert spinning wheel has disappeared. checking with driver.findElements 
+         * instead of until.elementIsNotVisible to avoid stale element error
+         */
+        await driver.wait(async () => {
+            let isPresent = await driver.findElements(by.css(".progress-indicator"));
+            return isPresent.length < 1;
+        }, 10000);
+        return;
     }
 
     async waitForSelectMenu() {
@@ -32,6 +38,11 @@ class WeatherPageClass {
         await locationInputElem.sendKeys(newLocationText);
         await this.waitForSelectMenu();
         return locationInputElem.sendKeys(selenium.Key.ENTER);
+    }
+
+    async dragDownToRefresh() {
+        let currentLocationElem = await this.getCurrentLocationElem();
+        await driver.actions().dragAndDrop(currentLocationElem, { x: 0, y: 1000 }).perform();
     }
 
     getCurrentLocationElem() {
