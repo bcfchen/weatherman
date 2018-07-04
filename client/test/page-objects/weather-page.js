@@ -21,17 +21,17 @@ class WeatherPageClass {
     }
 
     async waitForSelectMenu() {
-        let selectMenuOuterElem = driver.findElement(by.css(".Select-menu-outer"));
+        let selectMenuOuterElem = driver.findElement(by.css(".Select"));
         await driver.wait(until.elementIsVisible(selectMenuOuterElem));
         let selectMenuElem = driver.findElement(by.css(".Select-menu"));
-        return driver.wait(until.elementIsVisible(selectMenuElem));
+        return await driver.wait(until.elementIsVisible(selectMenuElem));
     }
 
     async searchNewLocation(newLocationText) {
         let locationInputElem = driver.findElement(by.css(".Select-input input"));
         await locationInputElem.sendKeys(newLocationText);
         await this.waitForSelectMenu();
-        return driver.findElement(by.css(".Select-option")).click();
+        return locationInputElem.sendKeys(selenium.Key.ENTER);
     }
 
     getCurrentLocationElem() {
