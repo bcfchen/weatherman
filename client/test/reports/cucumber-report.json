@@ -14,7 +14,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5938932277
+              "duration": 6006926307
             },
             "line": 9,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I should see the current temperature",
             "result": {
               "status": "passed",
-              "duration": 40494241
+              "duration": 34017671
             },
             "line": 10,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I should see the current location",
             "result": {
               "status": "passed",
-              "duration": 42068713
+              "duration": 45803764
             },
             "line": 11,
             "match": {
@@ -52,11 +52,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 145006664
+              "duration": 145576082
             },
             "hidden": true,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/node_modules/selenium-cucumber-js/runtime/world.js:221"
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
             }
           }
         ],
@@ -75,7 +75,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5535279602
+              "duration": 5682402777
             },
             "line": 14,
             "match": {
@@ -88,7 +88,7 @@
             "name": "I search for the location \"Chicago\"",
             "result": {
               "status": "passed",
-              "duration": 400460938
+              "duration": 465205227
             },
             "line": 15,
             "match": {
@@ -101,7 +101,7 @@
             "name": "I should see the location updated to \"Chicago, United States\"",
             "result": {
               "status": "passed",
-              "duration": 398515226
+              "duration": 545769497
             },
             "line": 16,
             "match": {
@@ -113,11 +113,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 155808496
+              "duration": 163560523
             },
             "hidden": true,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/node_modules/selenium-cucumber-js/runtime/world.js:221"
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
             }
           }
         ],

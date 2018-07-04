@@ -21,6 +21,8 @@ class WeatherPageClass {
     }
 
     async waitForSelectMenu() {
+        let selectMenuOuterElem = driver.findElement(by.css(".Select-menu-outer"));
+        await driver.wait(until.elementIsVisible(selectMenuOuterElem));
         let selectMenuElem = driver.findElement(by.css(".Select-menu"));
         return driver.wait(until.elementIsVisible(selectMenuElem));
     }

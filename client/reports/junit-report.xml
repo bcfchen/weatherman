@@ -5,11 +5,11 @@
             <property name="URI" value="/Users/beckchen/Projects/React/weatherman/client/test/features/weather-page.feature">
             </property>
         </properties>
-        <testcase name="Given I am on the weatherman app" classname="opening-the-weather-page;visualizing-temperature-of-current-location" time="6.759843716">
+        <testcase name="Given I am on the weatherman app" classname="opening-the-weather-page;visualizing-temperature-of-current-location" time="6.829847799">
         </testcase>
-        <testcase name="Then I should see the current temperature" classname="opening-the-weather-page;visualizing-temperature-of-current-location" time="0.051032659">
+        <testcase name="Then I should see the current temperature" classname="opening-the-weather-page;visualizing-temperature-of-current-location" time="0.062164652">
         </testcase>
-        <testcase name="And I should see the current location" classname="opening-the-weather-page;visualizing-temperature-of-current-location" time="0.05296013">
+        <testcase name="And I should see the current location" classname="opening-the-weather-page;visualizing-temperature-of-current-location" time="0.034263873">
         </testcase>
     </testsuite>
     <testsuite name="opening-the-weather-page;searching-for-weather-at-different-location" tests="3" failures="0" skipped="0">
@@ -17,11 +17,11 @@
             <property name="URI" value="/Users/beckchen/Projects/React/weatherman/client/test/features/weather-page.feature">
             </property>
         </properties>
-        <testcase name="Given I am on the weatherman app" classname="opening-the-weather-page;searching-for-weather-at-different-location" time="5.581851347">
+        <testcase name="Given I am on the weatherman app" classname="opening-the-weather-page;searching-for-weather-at-different-location" time="5.698799488">
         </testcase>
-        <testcase name="When I search for the location &quot;Chicago&quot;" classname="opening-the-weather-page;searching-for-weather-at-different-location" time="0.512077295">
+        <testcase name="When I search for the location &quot;Chicago&quot;" classname="opening-the-weather-page;searching-for-weather-at-different-location" time="0.508748221">
         </testcase>
-        <testcase name="Then I should see the location updated to &quot;Chicago, United States&quot;" classname="opening-the-weather-page;searching-for-weather-at-different-location" time="0.423276493">
+        <testcase name="Then I should see the location updated to &quot;Chicago, United States&quot;" classname="opening-the-weather-page;searching-for-weather-at-different-location" time="0.332915329">
         </testcase>
     </testsuite>
 </testsuites>
