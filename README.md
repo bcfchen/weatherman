@@ -35,7 +35,7 @@ npm start
 The page should automatically open up in your browser at __localhost:3000__
 
 ### To test
-Run the project with the steps above, then cd into _weatherman/client/test__ directory 
+Run the project with the steps above, then cd into __weatherman/client/test__ directory 
 
 Install dependencies by running
 ```
