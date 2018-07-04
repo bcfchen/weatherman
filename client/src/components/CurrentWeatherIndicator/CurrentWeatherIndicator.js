@@ -7,7 +7,7 @@ const CurrentWeatherIndicator = ({ isLoading, currentHourlyForecast }) => {
     return (
         <Grow in={!isLoading}>
             <div className="current-weather-indicator-container">
-                <Typography variant="display4">
+                <Typography className="current-temperature" variant="display4">
                     {currentHourlyForecast && currentHourlyForecast.temperature}
                 </Typography>
                 <Typography variant="headline" gutterBottom>

@@ -5,7 +5,7 @@ export default theme => ({
             padding: 0,
             height: 'auto',
             fontSize: "25px",
-            color: "white",
+            color: "red",
             background: "transparent",
             marginRight: "auto",
             marginLeft: "auto",
@@ -15,7 +15,8 @@ export default theme => ({
             marginRight: "auto",
             marginLeft: "auto",
             background: "transparent",
-            border: 0
+            border: 0,
+            color: "red"
         },
         '.Select-input input': {
             background: 'transparent',
