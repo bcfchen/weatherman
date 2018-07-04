@@ -4,7 +4,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const ProgressIndicator = ({ classes }) => {
     return (
-        <div>
+        <div className="progress-indicator">
             <CircularProgress variant="indeterminate" className={classes.progress} color="inherit" />
         </div>
     );

@@ -1,0 +1,135 @@
+[
+  {
+    "description": "    As an internet user\n    In order to find out about the weather\n    I want to be able to visualize weather info on weatherman",
+    "elements": [
+      {
+        "id": "opening-the-weather-page;visualizing-temperature-of-current-location",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Visualizing temperature of current location",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am on the weatherman app",
+            "result": {
+              "status": "passed",
+              "duration": 5938932277
+            },
+            "line": 9,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see the current temperature",
+            "result": {
+              "status": "passed",
+              "duration": 40494241
+            },
+            "line": 10,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I should see the current location",
+            "result": {
+              "status": "passed",
+              "duration": 42068713
+            },
+            "line": 11,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:16"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 145006664
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/node_modules/selenium-cucumber-js/runtime/world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": "opening-the-weather-page;searching-for-weather-at-different-location",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Searching for weather at different location",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I am on the weatherman app",
+            "result": {
+              "status": "passed",
+              "duration": 5535279602
+            },
+            "line": 14,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I search for the location \"Chicago\"",
+            "result": {
+              "status": "passed",
+              "duration": 400460938
+            },
+            "line": 15,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:21"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see the location updated to \"Chicago, United States\"",
+            "result": {
+              "status": "passed",
+              "duration": 398515226
+            },
+            "line": 16,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:25"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 155808496
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/beckchen/Projects/React/weatherman/client/node_modules/selenium-cucumber-js/runtime/world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "opening-the-weather-page",
+    "keyword": "Feature",
+    "line": 3,
+    "name": "Opening the weather page",
+    "tags": [],
+    "uri": "/Users/beckchen/Projects/React/weatherman/client/test/features/weather-page.feature"
+  }
+]
