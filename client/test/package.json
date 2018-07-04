@@ -1,0 +1,23 @@
+{
+    "name": "weatherman-test",
+    "version": "0.0.1",
+    "dependencies": {},
+    "engines": {
+        "node": ">=8.8"
+    },
+    "files": [
+        "build",
+        "gradle",
+        "deploy.gradle",
+        "build.gradle",
+        "gradlew",
+        "config",
+        "scripts"
+    ],
+    "scripts": {
+        "e2e": " node ./node_modules/selenium-cucumber-js/index.js"
+    },
+    "devDependencies": {
+        "selenium-cucumber-js": "^1.5.13"
+    }
+}

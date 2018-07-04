@@ -14,7 +14,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 6759843716
+              "duration": 6829847799
             },
             "line": 9,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I should see the current temperature",
             "result": {
               "status": "passed",
-              "duration": 51032659
+              "duration": 62164652
             },
             "line": 10,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I should see the current location",
             "result": {
               "status": "passed",
-              "duration": 52960130
+              "duration": 34263873
             },
             "line": 11,
             "match": {
@@ -52,7 +52,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 138707297
+              "duration": 143012287
             },
             "hidden": true,
             "match": {
@@ -75,7 +75,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5581851347
+              "duration": 5698799488
             },
             "line": 14,
             "match": {
@@ -88,7 +88,7 @@
             "name": "I search for the location \"Chicago\"",
             "result": {
               "status": "passed",
-              "duration": 512077295
+              "duration": 508748221
             },
             "line": 15,
             "match": {
@@ -101,7 +101,7 @@
             "name": "I should see the location updated to \"Chicago, United States\"",
             "result": {
               "status": "passed",
-              "duration": 423276493
+              "duration": 332915329
             },
             "line": 16,
             "match": {
@@ -113,7 +113,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 142890826
+              "duration": 326946217
             },
             "hidden": true,
             "match": {
