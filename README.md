@@ -12,6 +12,9 @@ Application features:
 - Development items visible on trello board ["Weatherman Trello"](https://trello.com/b/IeEqHBs4/weather-man)
 - __UI automated tests__ covering page load, pull down to refresh, and search by location features
 
+![Automation Test Gif](https://s8.postimg.cc/pzcjaj1sl/UI_Automation.gif, "Automation")
+
+
 ## Assumptions and caveats
 - App design mainly targeted __mobile web__, though dev and testing were done on desktop for convenience
 - Development and testing done on Chrome 67.0.3396.79 
@@ -48,7 +51,6 @@ Run automated test suites by:
 npm run e2e
 ```
 The page should automatically open up and run test cases. Coverage report should be displayed after tests are complete
-![Automation Test Gif](https://s8.postimg.cc/pzcjaj1sl/UI_Automation.gif, "Automation")
 
 ### To use
 Navigate to localhost:3000 (if not there already) to view current weather
