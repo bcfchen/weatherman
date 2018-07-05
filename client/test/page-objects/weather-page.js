@@ -14,7 +14,6 @@ class WeatherPageClass {
     async waitTillPageLoaded() {
         let elem = driver.findElement(by.css(".progress-indicator"));
         await driver.wait(until.elementIsVisible(elem));
-
         /* 
          * using this to assert spinning wheel has disappeared. checking with driver.findElements 
          * instead of until.elementIsNotVisible to avoid stale element error
@@ -30,14 +29,20 @@ class WeatherPageClass {
         let selectMenuOuterElem = driver.findElement(by.css(".Select"));
         await driver.wait(until.elementIsVisible(selectMenuOuterElem));
         let selectMenuElem = driver.findElement(by.css(".Select-menu"));
-        return await driver.wait(until.elementIsVisible(selectMenuElem));
+        await driver.wait(until.elementIsVisible(selectMenuElem));
+        await driver.wait(async () => {
+            let isPresent = await driver.findElements(by.css(".Select-option"));
+            return isPresent.length > 0;
+        }, 10000);
+        return;
     }
 
     async searchNewLocation(newLocationText) {
         let locationInputElem = driver.findElement(by.css(".Select-input input"));
         await locationInputElem.sendKeys(newLocationText);
         await this.waitForSelectMenu();
-        return locationInputElem.sendKeys(selenium.Key.ENTER);
+        await driver.findElement(by.css(".Select-option")).click();
+        return;
     }
 
     async dragDownToRefresh() {
