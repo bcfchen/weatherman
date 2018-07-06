@@ -71,6 +71,7 @@
         "build-css": "node-sass-chokidar src/App.scss -o src/",
         "watch-css": "npm run build-css && node-sass-chokidar src/App.scss -o src/ --watch --recursive",
         "start-js": "react-scripts start",
+        "test": "cross-env NODE_PATH=src jest --coverage --env=jsdom",
         "e2e": " node ./node_modules/selenium-cucumber-js/index.js -f ./test/features/weather-page.feature -s ./test/step-definitions -p ./test/page-objects"
     },
     "devDependencies": {
@@ -98,13 +99,13 @@
             "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
         ],
         "testEnvironment": "jsdom",
-        "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
         "testURL": "http://localhost",
         "transform": {
             "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
             "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
             "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
         },
+        "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
         "transformIgnorePatterns": [
             "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
         ],

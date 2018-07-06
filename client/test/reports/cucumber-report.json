@@ -14,7 +14,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 6973795663
+              "duration": 6041080825
             },
             "line": 9,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I should see the current temperature",
             "result": {
               "status": "passed",
-              "duration": 30793908
+              "duration": 33875658
             },
             "line": 10,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I should see the current location",
             "result": {
               "status": "passed",
-              "duration": 31152952
+              "duration": 30875245
             },
             "line": 11,
             "match": {
@@ -52,7 +52,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 146685385
+              "duration": 137994730
             },
             "hidden": true,
             "match": {
@@ -75,7 +75,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5177260096
+              "duration": 5718711817
             },
             "line": 14,
             "match": {
@@ -88,7 +88,7 @@
             "name": "I search for the location \"Chicago\"",
             "result": {
               "status": "passed",
-              "duration": 415556733
+              "duration": 331618960
             },
             "line": 15,
             "match": {
@@ -101,7 +101,7 @@
             "name": "I should see the location updated to \"Chicago, United States\"",
             "result": {
               "status": "passed",
-              "duration": 41158803
+              "duration": 50810954
             },
             "line": 16,
             "match": {
@@ -113,7 +113,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 136377219
+              "duration": 161469750
             },
             "hidden": true,
             "match": {
@@ -136,7 +136,7 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5891263375
+              "duration": 6954169840
             },
             "line": 19,
             "match": {
@@ -149,7 +149,7 @@
             "name": "I search for the location \"Abu Dhabi\"",
             "result": {
               "status": "passed",
-              "duration": 386342445
+              "duration": 543610118
             },
             "line": 20,
             "match": {
@@ -162,7 +162,7 @@
             "name": "I should see the location updated to \"Abu Dhabi, United Arab Emirates\"",
             "result": {
               "status": "passed",
-              "duration": 40435275
+              "duration": 43388653
             },
             "line": 21,
             "match": {
@@ -175,7 +175,7 @@
             "name": "I drag down to refresh",
             "result": {
               "status": "passed",
-              "duration": 2235914382
+              "duration": 2200381552
             },
             "line": 22,
             "match": {
@@ -188,7 +188,7 @@
             "name": "I should see the location not equal to \"Abu Dhabi, United Arab Emirates\"",
             "result": {
               "status": "passed",
-              "duration": 21320067
+              "duration": 18084199
             },
             "line": 23,
             "match": {
@@ -200,7 +200,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 151100689
+              "duration": 126190234
             },
             "hidden": true,
             "match": {
