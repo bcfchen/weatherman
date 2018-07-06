@@ -3,7 +3,7 @@ import { beginAjaxCall, ajaxCallError, ajaxCallSuccess } from "../../redux/actio
 class BaseApi {
     constructor() {
         this.client = axios.create();
-        this.client.defaults.timeout = 1000;
+        this.client.defaults.timeout = 3000;
     }
 
     get(requestUrl, dispatch, errorMsg = "") {

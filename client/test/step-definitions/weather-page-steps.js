@@ -20,7 +20,8 @@ module.exports = function () {
     });
 
     this.When(/^I search for the location "([^"]*)"$/, async newLocationText => {
-        return this.page.searchNewLocation(newLocationText);
+        await this.page.searchNewLocation(newLocationText);
+        return;
     });
 
     this.When(/^I drag down to refresh$/, async () => {
