@@ -20,7 +20,4 @@ const styles = theme => ({
 });
 
 ProgressIndicator.propTypes = propTypes;
-// export default ProgressIndicator;
 export default withStyles(styles)(ProgressIndicator);
-// withStyles(styles) = function (comp) { return comp; }
-// withStyles = function (styles) { return function (comp) { return comp; } };

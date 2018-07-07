@@ -1,8 +1,8 @@
 import Location from "../../models/Location";
 import baseApi from "../baseApi/baseApi";
 import { beginAjaxCall, ajaxCallError, ajaxCallSuccess } from "../../redux/actions/ajaxStatusActions";
-
 const config = require("../config.json");
+
 export const getLocations = async (locationText) => {
     let queryUrl = config.accuWeather.location.autoComplete.basePath + config.accuWeather.apiKey + "&q=" + locationText;
     let errMsg = "Getting location for " + locationText + " failed";

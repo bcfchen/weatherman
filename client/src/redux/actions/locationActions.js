@@ -2,10 +2,6 @@ import * as types from "../constants/action-types";
 import { getCurrentLocation } from "../../api/locationApi/locationApi";
 import Location from "../../models/Location";
 
-export const getLocationsSuccess = locations => {
-    return { type: types.GET_LOCATIONS_SUCCESS, locations };
-};
-
 export const getCurrentLocationSuccess = currentLocation => {
     return { type: types.GET_CURRENT_LOCATION_SUCCESS, currentLocation };
 };

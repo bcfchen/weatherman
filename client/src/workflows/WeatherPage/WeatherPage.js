@@ -13,7 +13,7 @@ import toastr from 'toastr';
 import ReactPullToRefresh from "react-pull-to-refresh";
 import { propTypes } from "./types";
 
-class WeatherPage extends React.Component {
+export class WeatherPage extends React.Component {
     constructor(props, context) {
         super(props.context);
         this.loadWeather = this.loadWeather.bind(this);
@@ -35,7 +35,7 @@ class WeatherPage extends React.Component {
                 this.props.weatherActions.loadHourlyForecasts(selectedLocation.value),
                 this.props.locationActions.updateCurrentLocation(selectedLocation)];
 
-            Promise.all(loadWeatherRequests).catch(err => {
+            return Promise.all(loadWeatherRequests).catch(err => {
                 toastr.error(err);
             });
         }
@@ -46,8 +46,7 @@ class WeatherPage extends React.Component {
             [this.props.locationActions.loadCurrentLocation(),
             this.props.weatherActions.loadCurrentLocationHourlyForecasts(),
             this.props.weatherActions.loadFiveDayForecasts()];
-
-        Promise.all(refreshRequests).then(() => resolve()).catch(err => {
+        return Promise.all(refreshRequests).then(() => resolve()).catch(err => {
             toastr.error(err);
             reject();
         })

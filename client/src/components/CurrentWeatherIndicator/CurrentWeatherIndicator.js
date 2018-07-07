@@ -10,7 +10,7 @@ const CurrentWeatherIndicator = ({ isLoading, currentHourlyForecast }) => {
                 <Typography className="current-temperature" variant="display4">
                     {currentHourlyForecast && currentHourlyForecast.temperature}
                 </Typography>
-                <Typography variant="headline" gutterBottom>
+                <Typography className="weather-description" variant="headline" gutterBottom>
                     {currentHourlyForecast && currentHourlyForecast.text}
                 </Typography>
             </div>

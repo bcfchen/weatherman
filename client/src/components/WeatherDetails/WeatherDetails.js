@@ -10,15 +10,15 @@ const WeatherDetails = ({ isLoading, currentHourlyForecast }) => {
             <Grid container className="weather-details-item-container">
                 <Grid item xs>
                     <Typography variant="subheading">Humidity</Typography>
-                    <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.humidity}</Typography>
+                    <Typography className="humidity-value" variant="subheading">{currentHourlyForecast && currentHourlyForecast.humidity}</Typography>
                 </Grid>
                 <Grid item xs>
                     <Typography variant="subheading">Wind</Typography>
-                    <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.windSpeed}</Typography>
+                    <Typography className="wind-speed-value" variant="subheading">{currentHourlyForecast && currentHourlyForecast.windSpeed}</Typography>
                 </Grid>
                 <Grid item xs>
                     <Typography variant="subheading">UV Index</Typography>
-                    <Typography variant="subheading">{currentHourlyForecast && currentHourlyForecast.uvIndex}</Typography>
+                    <Typography className="uv-index-value" variant="subheading">{currentHourlyForecast && currentHourlyForecast.uvIndex}</Typography>
                 </Grid>
             </Grid>
         </Grow>
