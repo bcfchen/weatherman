@@ -39,7 +39,7 @@ npm start
 The page should automatically open up in your browser at __localhost:3000__
 
 ### Unit tests
-Run unit tests with the command:
+Check that you're in the __weatherman/client__ folder and run unit tests with the command:
 ```
 npm test
 ```
