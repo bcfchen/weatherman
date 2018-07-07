@@ -12,7 +12,7 @@ export const loadHourlyForecastsSuccess = hourlyForecasts => {
 
 export const loadHourlyForecasts = locationKey => {
     return (dispatch) => {
-        getHourlyForecasts(locationKey, dispatch).then(hourlyForecasts => {
+        return getHourlyForecasts(locationKey, dispatch).then(hourlyForecasts => {
             dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
         });
     };

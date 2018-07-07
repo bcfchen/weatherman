@@ -5,11 +5,11 @@
             <property name="URI" value="/Users/beckchen/Projects/weatherman/client/test/features/weather-page.feature">
             </property>
         </properties>
-        <testcase name="Given I am on the weatherman app" classname="visualizing-weather-on-weatherman-app;visualizing-temperature-of-current-location" time="6.973795663">
+        <testcase name="Given I am on the weatherman app" classname="visualizing-weather-on-weatherman-app;visualizing-temperature-of-current-location" time="6.147496335">
         </testcase>
-        <testcase name="Then I should see the current temperature" classname="visualizing-weather-on-weatherman-app;visualizing-temperature-of-current-location" time="0.030793908">
+        <testcase name="Then I should see the current temperature" classname="visualizing-weather-on-weatherman-app;visualizing-temperature-of-current-location" time="0.032567253">
         </testcase>
-        <testcase name="And I should see the current location" classname="visualizing-weather-on-weatherman-app;visualizing-temperature-of-current-location" time="0.031152952">
+        <testcase name="And I should see the current location" classname="visualizing-weather-on-weatherman-app;visualizing-temperature-of-current-location" time="0.035556668">
         </testcase>
     </testsuite>
     <testsuite name="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" tests="3" failures="0" skipped="0">
@@ -17,11 +17,11 @@
             <property name="URI" value="/Users/beckchen/Projects/weatherman/client/test/features/weather-page.feature">
             </property>
         </properties>
-        <testcase name="Given I am on the weatherman app" classname="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" time="5.177260096">
+        <testcase name="Given I am on the weatherman app" classname="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" time="5.382183647">
         </testcase>
-        <testcase name="When I search for the location &quot;Chicago&quot;" classname="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" time="0.415556733">
+        <testcase name="When I search for the location &quot;Chicago&quot;" classname="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" time="0.34649528">
         </testcase>
-        <testcase name="Then I should see the location updated to &quot;Chicago, United States&quot;" classname="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" time="0.041158803">
+        <testcase name="Then I should see the location updated to &quot;Chicago, United States&quot;" classname="visualizing-weather-on-weatherman-app;searching-for-weather-at-different-location" time="0.062295547">
         </testcase>
     </testsuite>
     <testsuite name="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" tests="5" failures="0" skipped="0">
@@ -29,15 +29,15 @@
             <property name="URI" value="/Users/beckchen/Projects/weatherman/client/test/features/weather-page.feature">
             </property>
         </properties>
-        <testcase name="Given I am on the weatherman app" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="5.891263375">
+        <testcase name="Given I am on the weatherman app" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="5.913737098">
         </testcase>
-        <testcase name="When I search for the location &quot;Abu Dhabi&quot;" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="0.386342445">
+        <testcase name="When I search for the location &quot;Abu Dhabi&quot;" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="0.336636179">
         </testcase>
-        <testcase name="Then I should see the location updated to &quot;Abu Dhabi, United Arab Emirates&quot;" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="0.040435275">
+        <testcase name="Then I should see the location updated to &quot;Abu Dhabi, United Arab Emirates&quot;" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="0.040259118">
         </testcase>
-        <testcase name="When I drag down to refresh" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="2.235914382">
+        <testcase name="When I drag down to refresh" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="2.263678967">
         </testcase>
-        <testcase name="Then I should see the location not equal to &quot;Abu Dhabi, United Arab Emirates&quot;" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="0.021320067">
+        <testcase name="Then I should see the location not equal to &quot;Abu Dhabi, United Arab Emirates&quot;" classname="visualizing-weather-on-weatherman-app;refreshing-data-on-weatherman" time="0.018130194">
         </testcase>
     </testsuite>
 </testsuites>
