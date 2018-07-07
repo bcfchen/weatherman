@@ -11,6 +11,7 @@ Application features:
 - Background color changes depending on daytime/nighttime
 - Development items visible on trello board ["Weatherman Trello"](https://trello.com/b/IeEqHBs4/weather-man)
 - __UI automated tests__ covering page load, pull down to refresh, and search by location features
+- __unit tests__ covering components, redux workflows, and apis of the application
 
 ![Automation Test Gif](https://s8.postimg.cc/pzcjaj1sl/UI_Automation.gif, "Automation")
 
@@ -37,8 +38,15 @@ npm start
 ```
 The page should automatically open up in your browser at __localhost:3000__
 
-### To test
-Run the project with the steps above, then cd into __weatherman/client/test__ directory 
+### Unit tests
+Run unit tests with the command:
+```
+npm test
+```
+The terminal will output the test results and coverage
+
+### e2e tests
+Run the project with the "To run" steps above, then cd into __weatherman/client/test__ directory 
 
 Install dependencies by running
 ```
