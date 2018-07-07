@@ -24,6 +24,6 @@ const mappingRules = {
     shower: weatherDesc => { if (weatherDesc.toLowerCase().indexOf("downpour") > -1) return <Shower />; return null; },
     rain: weatherDesc => { if (weatherDesc.toLowerCase().indexOf("rain") > -1) return <Shower />; return null; },
     stormy: weatherDesc => { if (weatherDesc.toLowerCase().indexOf("stormy") > -1) return <Shower />; return null; },
-    snow: weatherDesc => { if (weatherDesc.toLowerCase().indexOf("cloud") > -1) return <Snow />; return null; },
+    snow: weatherDesc => { if (weatherDesc.toLowerCase().indexOf("snow") > -1) return <Snow />; return null; },
     cloudy: weatherDesc => { if (weatherDesc.toLowerCase().indexOf("cloud") > -1) return <Cloudy />; return null; }
 };
