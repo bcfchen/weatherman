@@ -18,10 +18,13 @@ export class WeatherPage extends React.Component {
         super(props.context);
         this.loadWeather = this.loadWeather.bind(this);
         this.handleRefresh = this.handleRefresh.bind(this);
+    }
+
+    componentDidMount() {
         let initialLoadRequests =
-            [props.locationActions.loadCurrentLocation(),
-            props.weatherActions.loadCurrentLocationHourlyForecasts(),
-            props.weatherActions.loadFiveDayForecasts()];
+            [this.props.locationActions.loadCurrentLocation(),
+            this.props.weatherActions.loadCurrentLocationHourlyForecasts(),
+            this.props.weatherActions.loadFiveDayForecasts()];
 
         Promise.all(initialLoadRequests).catch(err => {
             toastr.error(err);
