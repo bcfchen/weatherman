@@ -19,12 +19,11 @@ export const loadHourlyForecasts = locationKey => {
 }
 
 export const loadCurrentLocationHourlyForecasts = () => {
-    return (dispatch) => {
-        return getCurrentLocation(dispatch).then(location => {
-            return getHourlyForecasts(location.key, dispatch);
-        }).then(hourlyForecasts => {
-            dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
-        });
+    return async (dispatch) => {
+        let location = await getCurrentLocation(dispatch);
+        let hourlyForecasts = await getHourlyForecasts(location.key, dispatch);
+        dispatch(loadHourlyForecastsSuccess(hourlyForecasts));
+        return;
     };
 }
 
@@ -33,19 +32,18 @@ export const loadFiveDayForecasts = locationKey => {
         return loadCurrentLocationFiveDayForecasts();
     }
 
-    return (dispatch) => {
-        return getFiveDayForecasts(locationKey, dispatch).then(fiveDayForecasts => {
-            dispatch(loadWeatherSuccess(fiveDayForecasts));
-        });
+    return async (dispatch) => {
+        let fiveDayForecasts = await getFiveDayForecasts(locationKey, dispatch);
+        dispatch(loadWeatherSuccess(fiveDayForecasts));
+        return;
     };
 }
 
 const loadCurrentLocationFiveDayForecasts = () => {
-    return (dispatch) => {
-        return getCurrentLocation(dispatch).then(location => {
-            return getFiveDayForecasts(location.key, dispatch);
-        }).then(fiveDayForecasts => {
-            dispatch(loadWeatherSuccess(fiveDayForecasts));
-        });
+    return async (dispatch) => {
+        let location = await getCurrentLocation(dispatch);
+        let fiveDayForecasts = await getFiveDayForecasts(location.key, dispatch);
+        dispatch(loadWeatherSuccess(fiveDayForecasts));
+        return;
     };
 }

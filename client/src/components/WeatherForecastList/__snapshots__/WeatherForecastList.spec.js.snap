@@ -13,7 +13,7 @@ exports[`<WeatherForecastList/> on page load should render correctly 1`] = `
     <WeatherForecastItem
       forecastItem={
         DailyForecast {
-          "dayOfWeek": "Sun",
+          "dayOfWeek": "Sat",
           "high": 15,
           "low": 9,
           "text": "Sunny",

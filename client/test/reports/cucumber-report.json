@@ -14,11 +14,11 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5858418447
+              "duration": 6363156905
             },
             "line": 9,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:6"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:6"
             }
           },
           {
@@ -27,11 +27,11 @@
             "name": "I should see the current temperature",
             "result": {
               "status": "passed",
-              "duration": 91872043
+              "duration": 35012090
             },
             "line": 10,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:12"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:12"
             }
           },
           {
@@ -40,11 +40,11 @@
             "name": "I should see the current location",
             "result": {
               "status": "passed",
-              "duration": 39141832
+              "duration": 42806738
             },
             "line": 11,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:17"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:17"
             }
           },
           {
@@ -52,11 +52,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 135501310
+              "duration": 136060829
             },
             "hidden": true,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
             }
           }
         ],
@@ -75,11 +75,11 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5602405505
+              "duration": 5944494342
             },
             "line": 14,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:6"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:6"
             }
           },
           {
@@ -88,11 +88,11 @@
             "name": "I search for the location \"Chicago\"",
             "result": {
               "status": "passed",
-              "duration": 454847054
+              "duration": 349446752
             },
             "line": 15,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:22"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:22"
             }
           },
           {
@@ -101,11 +101,11 @@
             "name": "I should see the location updated to \"Chicago, United States\"",
             "result": {
               "status": "passed",
-              "duration": 646268534
+              "duration": 40165324
             },
             "line": 16,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:33"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:33"
             }
           },
           {
@@ -113,11 +113,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 146143181
+              "duration": 137309837
             },
             "hidden": true,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
             }
           }
         ],
@@ -136,11 +136,11 @@
             "name": "I am on the weatherman app",
             "result": {
               "status": "passed",
-              "duration": 5647405909
+              "duration": 5920518060
             },
             "line": 19,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:6"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:6"
             }
           },
           {
@@ -149,11 +149,11 @@
             "name": "I search for the location \"Abu Dhabi\"",
             "result": {
               "status": "passed",
-              "duration": 458658869
+              "duration": 334261923
             },
             "line": 20,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:22"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:22"
             }
           },
           {
@@ -162,11 +162,11 @@
             "name": "I should see the location updated to \"Abu Dhabi, United Arab Emirates\"",
             "result": {
               "status": "passed",
-              "duration": 572238102
+              "duration": 38646621
             },
             "line": 21,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:33"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:33"
             }
           },
           {
@@ -175,11 +175,11 @@
             "name": "I drag down to refresh",
             "result": {
               "status": "passed",
-              "duration": 2445429576
+              "duration": 2240818639
             },
             "line": 22,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:27"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:27"
             }
           },
           {
@@ -188,11 +188,11 @@
             "name": "I should see the location not equal to \"Abu Dhabi, United Arab Emirates\"",
             "result": {
               "status": "passed",
-              "duration": 23930033
+              "duration": 20966790
             },
             "line": 23,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/step-definitions/weather-page-steps.js:38"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/step-definitions/weather-page-steps.js:38"
             }
           },
           {
@@ -200,11 +200,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 134631410
+              "duration": 134392526
             },
             "hidden": true,
             "match": {
-              "location": "/Users/beckchen/Projects/React/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
+              "location": "/Users/beckchen/Projects/weatherman/client/test/node_modules/selenium-cucumber-js/runtime/world.js:221"
             }
           }
         ],
@@ -217,6 +217,6 @@
     "line": 3,
     "name": "Visualizing weather on weatherman app",
     "tags": [],
-    "uri": "/Users/beckchen/Projects/React/weatherman/client/test/features/weather-page.feature"
+    "uri": "/Users/beckchen/Projects/weatherman/client/test/features/weather-page.feature"
   }
 ]
