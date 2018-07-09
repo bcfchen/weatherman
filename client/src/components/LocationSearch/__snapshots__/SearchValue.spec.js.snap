@@ -1,187 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchValue/> on page load should render correctly 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchValue
-    value={
-        Object {
-            "label": "myLabel",
-          }
-    }
+<div
+  className="Select-value async-select-value"
 >
-    <div
-        className="child-div"
+  <span
+    className="Select-value-label"
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="headline"
     >
-        Child Div
+      myLabel
+    </WithStyles(Typography)>
+    <div
+      className="child-div"
+    >
+      Child Div
     </div>
-</SearchValue>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <span
-        className="Select-value-label"
->
-        <WithStyles(Typography)
-                gutterBottom={true}
-                variant="headline"
-        >
-                myLabel
-        </WithStyles(Typography)>
-        <div
-                className="child-div"
-        >
-                Child Div
-        </div>
-</span>,
-      "className": "Select-value async-select-value",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="headline"
->
-            myLabel
-</WithStyles(Typography)>,
-          <div
-            className="child-div"
->
-            Child Div
-</div>,
-        ],
-        "className": "Select-value-label",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "myLabel",
-            "gutterBottom": true,
-            "variant": "headline",
-          },
-          "ref": null,
-          "rendered": "myLabel",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Child Div",
-            "className": "child-div",
-          },
-          "ref": null,
-          "rendered": "Child Div",
-          "type": "div",
-        },
-      ],
-      "type": "span",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <span
-          className="Select-value-label"
->
-          <WithStyles(Typography)
-                    gutterBottom={true}
-                    variant="headline"
-          >
-                    myLabel
-          </WithStyles(Typography)>
-          <div
-                    className="child-div"
-          >
-                    Child Div
-          </div>
-</span>,
-        "className": "Select-value async-select-value",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <WithStyles(Typography)
-              gutterBottom={true}
-              variant="headline"
->
-              myLabel
-</WithStyles(Typography)>,
-            <div
-              className="child-div"
->
-              Child Div
-</div>,
-          ],
-          "className": "Select-value-label",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "myLabel",
-              "gutterBottom": true,
-              "variant": "headline",
-            },
-            "ref": null,
-            "rendered": "myLabel",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Child Div",
-              "className": "child-div",
-            },
-            "ref": null,
-            "rendered": "Child Div",
-            "type": "div",
-          },
-        ],
-        "type": "span",
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
+  </span>
+</div>
 `;
