@@ -10,7 +10,8 @@ describe("<WeatherForecastList/>", () => {
                 Maximum: { Value: 15 },
                 Minimum: { Value: 9 }
             },
-            Day: { IconPhrase: "Sunny" }
+            Day: { IconPhrase: "Sunny" },
+            Date: "20180915"
         },
         defaultProps = {
             weatherForecasts: [new DailyForecast(forecastProps)]

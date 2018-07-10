@@ -99,6 +99,9 @@
             "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
         ],
         "testEnvironment": "jsdom",
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
         "testURL": "http://localhost",
         "transform": {
             "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
